@@ -5,9 +5,9 @@
     <title>Кэт энерджи: функциональное питание для котов.</title>
   </head>
   <body>
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/191x39" width="191" height="39" alt="Логотип Кэт энерджи">
+    <header class="header">
+      <a class="header__logo">
+        <img class="header__logo-image" src="https://via.placeholder.com/191x39" width="191" height="39" alt="Логотип Кэт энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия меню"></button>
@@ -18,43 +18,45 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="main">
       <section class="intro">
-        <h1 class="intro__title">Функциональное питание для котов</h1>
-        <p class="intro__desc">Занялся собой? Займись котом!</p>
-        <div class="intro__wrapper-product-intro">
-          <img class="intro__product-intro" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Пример корма для кошек Кэт энерджи">
+        <div class="intro__wrapper">
+          <h1 class="intro__title">Функциональное питание для котов</h1>
+          <p class="intro__desc">Занялся собой? Займись котом!</p>
+          <div class="intro__wrapper-image">
+            <img class="intro__image" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Пример корма для кошек Кэт энерджи">
+          </div>
         </div>
-        <button class="btn intro__button-form" type="button">Подобрать программу</button>
+        <button class="button button--green intro__button" type="button">Подобрать программу</button>
       </section>
-      <section class="product-program">
+      <section class="programs">
         <h2 class="visually-hidden">Программы питания от корма Кэт энерджи</h2>
-        <ul class="product-program__program program">
-          <li class="program__item">
-            <div class="program__title">
-              <h3 class="program__text">Похудение</h3>
-              <div class="program__logo program__logo--slim"></div>
+        <ul class="programs__list program-list">
+          <li class="program-list__item">
+            <div class="program-list__title">
+              <h3 class="program-list__text">Похудение</h3>
+              <div class="program-list__logo program-list__logo--slim"></div>
             </div>
-            <p class="program__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <div class="program__more">
-              <a class="program__link" href="catalog.html#slim">Каталог Slim</a>
+            <p class="program-list__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <div class="program-list__more">
+              <a class="program-list__link" href="catalog.html#slim">Каталог Slim</a>
             </div>
           </li>
-          <li class="program__item">
-            <div class="program__title">
-              <h3 class="program__text">Набор массы</h3>
-              <div class="program__logo program__logo--pro"></div>
+          <li class="program-list__item">
+            <div class="program-list__title">
+              <h3 class="program-list__text">Набор массы</h3>
+              <div class="program-list__logo program-list__logo--pro"></div>
             </div>
-            <p class="program__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <div class="program__more">
-              <a class="program__link" href="catalog.html#pro">Каталог Pro</a>
+            <p class="program-list__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <div class="program-list__more">
+              <a class="program-list__link" href="catalog.html#pro">Каталог Pro</a>
             </div>
           </li>
         </ul>
       </section>
-      <section class="product-advantages">
-        <h2 class="product-advantages__title">Как это работает</h2>
-        <ul class="product-advantages__list advantage-list">
+      <section class="advantages">
+        <h2 class="advantages__title">Как это работает</h2>
+        <ul class="advantages__list advantage-list">
           <li class="advantage-list__item">
             <div class="advantage-list__icon advantage-list__icon--healthy"></div>
             <p class="advantage-list__desc">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -74,11 +76,11 @@
         </ul>
       </section>
     </main>
-    <footer class="page-footer">
-      <a class="page-footer__logo">
-        <img class="page-footer__logo-image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип Кэт энерджи">
+    <footer class="footer">
+      <a class="footer__logo">
+        <img class="footer__logo-image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип Кэт энерджи">
       </a>
-        <div class="page-footer__social social">
+        <div class="footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="" aria-label="Вконтаке"></a>
@@ -91,7 +93,7 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright copyright">
+        <div class="footer__copyright copyright">
           <span class="copyright__text">HTML Academy</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
         </div>
