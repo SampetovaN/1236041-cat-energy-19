@@ -23,7 +23,7 @@
         <div class="intro__wrapper">
           <h1 class="intro__title">Функциональное питание для котов</h1>
           <p class="intro__desc">Занялся собой? Займись котом!</p>
-          <div class="intro__wrapper-image">
+          <div class="intro__image-wrapper">
             <img class="intro__image" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Пример корма для кошек Кэт энерджи">
           </div>
         </div>
@@ -77,28 +77,60 @@
           </li>
         </ul>
       </section>
+      <section class="results">
+        <h2 class="results__title">Живой пример</h2>
+        <p class="results__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+        <div class="results__info">
+          <div class="results__counts">
+            <div class="results__item">
+              <b class="results__amount">5 кг</b>
+              <p class="results__text">снижение веса</p>
+            </div>
+            <div class="results__item">
+              <b class="results__amount">60 дней</b>
+              <p class="results__text">затрачено времени</p>
+            </div>
+            <p class="results__money">Затраты на питание: 15 000 руб.</p>
+          </div>
+          <div class="results__appearance">
+            <div class="results__image-wrapper"></div>
+            <div class="results__slider slider">
+              <button class="slider__button" aria-label="Переход к фотографии кота до приема Кэт Энерджи">Было</button>
+              <input class="slider__line" type="range" min="1" max="100" value="50" id="appear-range">
+              <button class="slider__button" aria-label="Переход к фотографии кота после приема Кэт Энерджи">Стало</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__desc">
+          <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <div class="contacts__map-wrapper" aria-label="улица Большая Конюшенная, дом 19/8, город Санкт-Петербург"></div>
+      </section>
     </main>
     <footer class="footer">
       <a class="footer__logo">
         <img class="footer__logo-image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип Кэт энерджи">
       </a>
-        <div class="footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="" aria-label="Вконтаке"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="" aria-label="Инстаграм"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="" aria-label="Фейсбук"></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__copyright copyright">
-          <span class="copyright__text">HTML Academy</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
-        </div>
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="" aria-label="Вконтаке"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="" aria-label="Инстаграм"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="" aria-label="Фейсбук"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright copyright">
+        <span class="copyright__text">HTML Academy</span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
+      </div>
     </footer>
   </body>
 </html>
