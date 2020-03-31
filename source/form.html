@@ -20,84 +20,87 @@
   </header>
   <main class="main">
     <section class="form">
-      <h1 class="form__title">Подбор программы</h1>
+      <h1 class="form__legend">Подбор программы</h1>
       <p class="form__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="form__questions"  method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__fieldset profile">
+        <fieldset class="form__profile">
           <legend class="visually-hidden">Параметры кота</legend>
-          <div class="profile__fields">
-            <div class="profile__item field">
+          <div class="form__field-list">
+            <div class="form__field field">
               <label class="field__label" for="cat-name">Имя:*</label>
               <input class="field__input" type="text" name="name" id="cat-name" placeholder="Барсик">
             </div>
-            <div class="profile__item field">
+            <div class="form__field field">
               <label class="field__label" for="cat-weight">Вес (кг):*</label>
               <input class="field__input" type="text" name="weight" id="cat-weight">
             </div>
-            <div class="profile__item field">
+            <div class="form__field field">
               <label class="field__label" for="cat-age">Возраст (лет):</label>
               <input class="field__input" type="text" name="age" id="cat-age">
             </div>
           </div>
-          <ul class="profile__radio">
-            <li class="profile__item radio">
+        </fieldset>
+        <fieldset class="form__program-pick">
+          <legend class="visually-hidden">Выбор программы</legend>
+          <ul class="form__radio-list">
+            <li class="form__radio radio">
               <input class="radio__input" type="radio" name="program-group" id="slim">
               <label class="radio__label" for="slim">Похудение</label>
             </li>
-            <li class="profile__item radio">
+            <li class="form__radio radio">
               <input class="radio__input" type="radio" name="program-group" id="pro">
               <label class="radio__label" for="pro">Набор массы</label>
             </li>
-            <li class="profile__item radio">
+            <li class="form__radio radio">
               <input class="radio__input" type="radio" name="program-group" id="none">
               <label class="radio__label" for="none">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__fieldset contacts-form">
-          <legend class="contacts-form__title title">Контактные данные (владельца кота)</legend>
-          <div class="contacts-form__fields">
-            <div class="contacts-form__item field">
+        <fieldset class="form__contacts-form">
+          <legend class="form__legend title">Контактные данные (владельца кота)</legend>
+          <div class="form__field-list">
+            <div class="form__field field">
               <label class="field__label" for="cat-email">E-mail:*</label>
               <input class="field__input--email" type="email" name="email" id="cat-email" placeholder="kuklachev@gmail.com">
             </div>
-            <div class="contacts-form__item field">
+            <div class="form__field field">
               <label class="field__label" for="cat-phone">Телефон:*</label>
               <input class="field__input--phone" type="tel" name="phone" id="cat-phone" placeholder="8 (960) 900-60-90">
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset comments">
-          <legend class="comments__title title">Комментарий</legend>
-          <textarea class="comments__text textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <fieldset class="form__comments">
+          <legend class="form__legend title">Комментарий</legend>
+          <textarea class="form__textarea textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="form__fieldset additional">
-          <legend class="additional__title title">Дополнительно</legend>
-          <ul class="additional__checkbox">
-            <li class="additional__item checkbox">
+        <fieldset class="form__additional">
+          <legend class="form__legend title">Дополнительно</legend>
+          <ul class="form__checkbox-list">
+            <li class="form__checkbox checkbox">
               <input class="checkbox__input" type="checkbox" name="sweetener" id="sweetener">
               <label class="checkbox__label" for="sweetener">Сахарозаменитель</label>
             </li>
-            <li class="additional__item checkbox">
+            <li class="form__checkbox checkbox">
               <input class="checkbox__input" type="checkbox" name="water" id="water">
               <label class="checkbox__label" for="water">Питьевая вода</label>
             </li>
-            <li class="additional__item checkbox">
+            <li class="form__checkbox checkbox">
               <input class="checkbox__input" type="checkbox" name="milk" id="milk">
               <label class="checkbox__label" for="milk">Молоко</label>
             </li>
-            <li class="additional__item checkbox">
+            <li class="form__checkbox checkbox">
               <input class="checkbox__input" type="checkbox" name="vitamin" id="vitamin">
               <label class="checkbox__label" for="vitamin">Витамины</label>
             </li>
           </ul>
         </fieldset>
-        <button class="button button--green questions__button" type="submit">Отправить заявку</button>
+        <button class="button button--green form__button" type="submit">Отправить заявку</button>
       </form>
       <p class="form__footnote">* — Обязательные поля</p>
     </section>
     <section class="contacts">
-      <div class="contacts__desc">
+      <div class="contacts__text">
         <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
