@@ -2,7 +2,6 @@
 
 * Студент: [Вероника Сампетова](https://up.htmlacademy.ru/adaptive/19/user/1236041).
 * Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya).
-
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
