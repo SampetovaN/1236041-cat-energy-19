@@ -1,0 +1,23 @@
+.site-list {
+  .style-list();
+  .text-sets(20px;20px);
+}
+
+.site-list__item {
+  a {
+    color: @text-color;
+    &:hover,
+    &:focus {
+      color: fade(@text-color, 40%);
+    }
+    &:active {
+      color: fade(@text-color, 70%);
+    }
+  }
+}
+
+.site-list__item--active {
+  a {
+    border-bottom: 2px solid @green-color;
+  }
+}
