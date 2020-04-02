@@ -1,25 +1,25 @@
 .site-list {
-  .style-list();
-  .text-sets(20px;20px);
+  list-style: none;
+  .text-sets(20px;20px;bold);
 }
 
 .site-list__item {
   a {
-    color: @text-color;
+    color: @black;
 
     &:hover,
     &:focus {
-      color: fade(@text-color, 40%);
+      color: fade(@black, 60%);
     }
 
     &:active {
-      color: fade(@text-color, 70%);
+      color: fade(@black, 30%);
     }
   }
 }
 
 .site-list__item--active {
   a {
-    border-bottom: 2px solid @green-color;
+    border-bottom: 2px solid @green;
   }
 }

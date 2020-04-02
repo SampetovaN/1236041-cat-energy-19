@@ -1,9 +1,16 @@
-.style-list(@style:none) {
-  list-style: @style;
-}
-
-.text-sets(@size:14px;@height:18px;@weight:normal) {
-  font-weight: @weight;
+.text-sets(@size;@height;@weight:normal) {
   font-size: @size;
   line-height: @height;
+  font-weight: @weight;
+}
+
+.text-color-sets(@size;@height;@color;@weight:normal) {
+  .text-sets(@size;@height);
+  color: @color;
+}
+
+.brown-paragraph(@size;@height) {
+  .text-color-sets(@size;@height;@brown);
+  font-family: "Arial", sans-serif;
+  text-transform: none;
 }

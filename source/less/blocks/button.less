@@ -1,38 +1,37 @@
 .button {
-  .text-sets();
+  .text-sets(14px;18px);
   font: inherit;
-
   text-align: center;
   text-transform: uppercase;
-  color: @color-common;
-
   border: none;
-}
 
-.button--green {
-  background-color: @green-color;
+  &--green {
+    color: @white;
+    background-color: @green;
 
-  &:hover,
-  &:focus {
-    background-color: #5eaa2f;
+    &:hover,
+    &:focus {
+      background-color: @bright-green;
+    }
+
+    &:active {
+      background-color: @bright-green;
+      color: fade(@white, 30%);
+    }
   }
 
-  &:active {
-    background-color: #5eaa2f;
-    color: fade(@color-common, 70%);
-  }
-}
+  &--gray {
+    color: @brown;
+    background-color: @grey;
 
-.button--gray {
-  background-color: @grey-color;
+    &:hover,
+    &:focus {
+      background-color: @bright-grey;
+    }
 
-  &:hover,
-  &:focus {
-    background-color: #ebebeb;
-  }
-
-  &:active {
-    background-color: #ebebeb;
-    color: fade(@grey-color, 70%);
+    &:active {
+      background-color: @bright-grey;
+      color: fade(@brown, 30%);
+    }
   }
 }

@@ -1,35 +1,40 @@
-.programs__wrapper {
-  width: 280px;
+.programs {
+  padding: 0 @side-indent;
 }
 
 .programs__list {
-  .style-list();
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .programs__item {
-  background-color: @grey-color;
+  background-color: @grey;
+  margin-bottom: 20px;
+  outline: 2px solid black;
+}
+
+.programs__item:last-child {
+  margin-bottom: 0;
 }
 
 .programs__text {
-  .text-sets(24px;37px);
-  color: @text-color;
+  .text-color-sets(24px;37px;@black);
+  margin: 0;
 }
 
 .programs__logo {
-  background-color: @green-color;
+  background-color: @green;
 }
 
 .programs__desc {
-  .text-sets(14px;18px);
-  font-family: "Arial", sans-serif;
-  color: #444444;
+  .brown-paragraph(14px;18px);
 }
 
 .programs__link {
-  .text-sets(16px;16px);
-  color: @text-color;
+  .text-color-sets(16px;16px; @black);
 
   &:active {
-    color: fade(@text-color, 70%);
+    color: fade(@black, 30%);
   }
 }

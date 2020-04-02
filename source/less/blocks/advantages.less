@@ -1,18 +1,33 @@
+.advantages {
+  padding: 36px @side-indent 42px;
+}
+
 .advantages__title {
-  .text-sets(36px;60px);
-  color: @text-color;
+  .text-color-sets(36px;60px; @black);
+  text-transform: none;
+  margin: 0;
 }
 
 .advantages__list {
-  .style-list();
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item {
+  outline: 2px solid black;
+  margin-bottom: 30px;
+}
+
+.advantages__item:last-child {
+  margin-bottom: 0;
 }
 
 .advantages__icon {
-  color: @green-color;
+  color: @green;
 }
 
 .advantages__desc {
-  .text-sets();
-  font-family: "Arial", sans-serif;
-  color: #444444;
+  .brown-paragraph(14px;18px);
+  margin: 0;
 }
