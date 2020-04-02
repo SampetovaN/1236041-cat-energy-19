@@ -5,24 +5,31 @@
 .programs__list {
   .style-list();
 }
+
 .programs__item {
   background-color: @grey-color;
 }
+
 .programs__text {
   .text-sets(24px;37px);
   color: @text-color;
 }
+
 .programs__logo {
   background-color: @green-color;
 }
+
 .programs__desc {
   .text-sets(14px;18px);
+  font-family: "Arial", sans-serif;
   color: #444444;
 }
+
 .programs__link {
   .text-sets(16px;16px);
   color: @text-color;
-  &:active{
+
+  &:active {
     color: fade(@text-color, 70%);
   }
 }
