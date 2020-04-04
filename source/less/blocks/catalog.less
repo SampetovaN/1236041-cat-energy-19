@@ -6,7 +6,6 @@
   .text-color-sets(36px;60px;@catalog-title-color);
   text-transform: none;
   margin: 0;
-  border-top: 2px solid #f7f7f7;
 }
 
 .catalog__list {
@@ -15,12 +14,15 @@
 }
 
 .catalog__item {
-  border-top: 2px solid #f7f7f7;
-  //.set-outline();
+  .set-border();
+  padding: 20px 25px;
+  .set-outline();
 }
 
 .catalog__more {
-  outline: 2px solid red;
+  padding: 20px 25px;
+  border-bottom: 2px solid #f7f7f7;
+  .set-outline(red);
 }
 
 .catalog__show-more {

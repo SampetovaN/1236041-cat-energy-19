@@ -47,10 +47,12 @@
 .input-border () {
   outline: 0;
   border: 1px solid @border-input-color;
+
   &:active,
   &:focus {
     border: 2px solid @border-input-color-active;
   }
+
   &--error {
     border: 2px solid @border-input-color-error;
   }
@@ -64,4 +66,11 @@
 // временный миксин
 .set-outline (@color:black) {
   outline: 2px solid @color;
+}
+
+.set-border() {
+  &:first-child {
+    border-top: 1px solid @product-item-border;
+  }
+  border-bottom: 1px solid @product-item-border;
 }

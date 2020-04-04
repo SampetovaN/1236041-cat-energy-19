@@ -3,21 +3,18 @@
 }
 
 .results__title {
-   .text-color-sets(36px;60px;@results-title-color);
-   text-transform: none;
-   margin: 0;
-   padding: 33px 20px 0;
+  .text-color-sets(36px;60px;@results-title-color);
+  text-transform: none;
+  margin: 0;
 }
 
 .results__desc {
   .sets-paragraph(14px;18px);
-  margin: 35px 20px 32px;
-  //.set-outline();
 }
 
 .results__info {
-  //.set-outline();
-  padding: 0 20px 32px;
+  .set-outline();
+  padding: 0 20px 38px;
 }
 
 .results__amount {
@@ -29,12 +26,17 @@
 }
 
 .results__money {
-  .text-color-sets(14px;20px;@results-amount-color)
+  .text-color-sets(14px;20px;@results-amount-color);
 }
+
+.results__appearance {
+  .set-outline();
+  padding: 0 20px 63px;
+}
+
 .results__image-wrapper {
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   width: 311px;
   height: 232px;
-  margin-bottom: 40px;
 }
