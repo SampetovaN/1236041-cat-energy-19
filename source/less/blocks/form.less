@@ -7,29 +7,23 @@
   .text-color-sets(14px;18px;@form-desc-color);
 }
 
-.form__profile,
-.form__program-pick,
-.form__contacts-form,
-.form__comments,
-.form__additional {
-  .fieldset-fresh();
-  .set-outline();
-}
 .form__legend {
   .text-color-sets(24px;24px;@legend-color);
   text-transform: none;
 }
 
-.form__radio-list {
-  .list-refresh();
+.form__program-pick {
+  border-bottom: 1px solid @fieldset-border-color;
+  border-top: 1px solid @fieldset-border-color;
 }
 
+.form__radio-list,
 .form__checkbox-list {
   .list-refresh();
 }
 
 .form__button {
-  .set-outline();
+  //.set-outline();
 }
 
 .form__footnote {

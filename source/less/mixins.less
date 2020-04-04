@@ -38,6 +38,22 @@
 
 .pick-label() {
   .text-color-sets(16px;18px;@label-color);
+
+  &:active {
+    color: fade(@label-color, 30%);
+  }
+}
+
+.input-border () {
+  outline: 0;
+  border: 1px solid @border-input-color;
+  &:active,
+  &:focus {
+    border: 2px solid @border-input-color-active;
+  }
+  &--error {
+    border: 2px solid @border-input-color-error;
+  }
 }
 
 .last-child-margin() {
