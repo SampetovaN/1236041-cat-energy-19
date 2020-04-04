@@ -1,15 +1,13 @@
-.footer {
-  background-color: @grey;
-  padding: 40px @side-indent 31px;
-}
-
 .footer__logo,
 .footer__copyright {
-  outline: 2px solid black;
+  .set-outline();
 }
 
 .footer__social {
   margin: 32px 0;
   height: 20px;
-  outline: 2px solid black;
+  .set-outline();
+}
+.footer__wrapper {
+  background-color: @footer-background-color;
 }

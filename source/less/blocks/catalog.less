@@ -3,33 +3,30 @@
 }
 
 .catalog__title {
-  .text-color-sets(36px;60px;@black);
+  .text-color-sets(36px;60px;@catalog-title-color);
   text-transform: none;
   margin: 0;
-  padding: 15px @side-indent 25px;
   border-top: 2px solid #f7f7f7;
 }
 
 .catalog__list {
   .list-refresh();
-  outline: 2px solid red;
+  .set-outline(red);
 }
 
 .catalog__item {
   border-top: 2px solid #f7f7f7;
-  padding: 10px @side-indent 24px;
-  outline: 2px solid black;
+  .set-outline();
 }
 
 .catalog__more {
-  padding: 24px @side-indent;
   outline: 2px solid red;
 }
 
 .catalog__show-more {
-  .text-color-sets(16px;20px;@black);
+  .text-color-sets(16px;20px;@catalog-title-color);
 }
 
 .catalog__promo {
-  .brown-paragraph(12px;16px);
+  .sets-paragraph(12px;16px);
 }

@@ -1,38 +1,30 @@
-.programs {
-  padding: 0 @side-indent;
-}
-
 .programs__list {
   .list-refresh();
 }
 
 .programs__item {
-  background-color: @grey;
-  margin-bottom: 20px;
-  outline: 2px solid black;
-}
-
-.programs__item:last-child {
-  margin-bottom: 0;
+  background-color: @program-background-color;
+  .set-outline();
+  .last-child-margin();
 }
 
 .programs__text {
-  .text-color-sets(24px;37px;@black);
+  .text-color-sets(24px;37px;@program-text-color);
   margin: 0;
 }
 
 .programs__logo {
-  background-color: @green;
+  background-color: @programs-logo-color;
 }
 
 .programs__desc {
-  .brown-paragraph(14px;18px);
+  .sets-paragraph(14px;18px);
 }
 
 .programs__link {
-  .text-color-sets(16px;16px; @black);
+  .text-color-sets(16px;16px; @program-link-color);
 
   &:active {
-    color: fade(@black, 30%);
+    color: fade(@program-link-color, 30%);
   }
 }

@@ -9,8 +9,8 @@
   color: @color;
 }
 
-.brown-paragraph(@size;@height) {
-  .text-color-sets(@size;@height;@brown);
+.sets-paragraph(@size;@height) {
+  .text-color-sets(@size;@height;@paragraph-color);
   font-family: "Arial", sans-serif;
   text-transform: none;
 }
@@ -19,4 +19,33 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.fieldset-fresh() {
+  border: 0;
+  margin: 0;
+}
+
+.placeholder-style() {
+  &::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: @placeholder-text-color;
+    text-transform: uppercase;
+  }
+}
+
+.pick-label() {
+  .text-color-sets(16px;18px;@label-color);
+}
+
+.last-child-margin() {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// временный миксин
+.set-outline (@color:black) {
+  outline: 2px solid @color;
 }

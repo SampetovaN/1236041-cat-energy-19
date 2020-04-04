@@ -6,32 +6,32 @@
   border: none;
 
   &--green {
-    color: @white;
-    background-color: @green;
+    color: @green-button-text-color;
+    background-color: @green-button-color;
 
     &:hover,
     &:focus {
-      background-color: @bright-green;
+      background-color: @green-button-color-hover;
     }
 
     &:active {
-      background-color: @bright-green;
-      color: fade(@white, 30%);
+      background-color: @green-button-color-active;
+      color: fade(@green-button-text-color, 30%);
     }
   }
 
   &--gray {
-    color: @brown;
-    background-color: @grey;
+    color: @grey-button-text-color;
+    background-color: @grey-button-background-color;
 
     &:hover,
     &:focus {
-      background-color: @bright-grey;
+      background-color: @grey-button-text-hover;
     }
 
     &:active {
-      background-color: @bright-grey;
-      color: fade(@brown, 30%);
+      background-color: @grey-button-text-active;
+      color: fade(@grey-button-text-color, 30%);
     }
   }
 }

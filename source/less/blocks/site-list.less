@@ -5,21 +5,23 @@
 
 .site-list__item {
   a {
-    color: @black;
+    color: @nav-link-color;
 
     &:hover,
     &:focus {
-      color: fade(@black, 60%);
+      color: fade(@nav-link-color, 60%);
     }
 
     &:active {
-      color: fade(@black, 30%);
+      color: fade(@nav-link-color, 30%);
     }
   }
+  border-top: 2px solid #f7f7f7;
+  padding: 24px 70px 20px;
 }
 
 .site-list__item--active {
   a {
-    border-bottom: 2px solid @green;
+    border-bottom: 2px solid @nav-border-active-color;
   }
 }
