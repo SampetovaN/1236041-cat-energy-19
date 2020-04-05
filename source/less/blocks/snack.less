@@ -1,0 +1,19 @@
+.snack__title {
+  a {
+    .text-color-sets(16px;16px;@product-title-color);
+
+    &:hover,
+    &:focus {
+      color: fade(@product-title-color, 60%);
+    }
+
+    &:active {
+      color: fade(@product-title-color, 30%);
+    }
+  }
+  margin: 0;
+}
+
+.snack__content {
+  .sets-paragraph(14px;14px);
+}

@@ -1,0 +1,29 @@
+.promo__wrapper {
+  padding-top: 10px;
+}
+
+.promo__image-wrapper {
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-color: silver;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 280px;
+  height: 289px;
+
+  &::after {
+    content: "";
+    background-color: silver;
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.promo__desc {
+  .text-color-sets(16px;20px;@promo-desc-text-color);
+  font-family: "Arial", sans-serif;
+  text-transform: none;
+  margin: 0;
+}
