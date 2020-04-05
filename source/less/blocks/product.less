@@ -1,19 +1,6 @@
 .product__title {
-  a {
-    .text-color-sets(16px;20px;@product-title-color);
-
-    &:hover,
-    &:focus {
-      color: fade(@product-title-color, 60%);
-    }
-
-    &:active {
-      color: fade(@product-title-color, 30%);
-    }
-  }
-  margin: 0;
+  .set-product-title(16px;20px;@product-title-color);
 }
-
 
 .product__td {
   .sets-paragraph(12px;16px);
