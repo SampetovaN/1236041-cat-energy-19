@@ -1,37 +1,15 @@
 .button {
-  .text-sets(14px;18px);
+  .text-sets(14px; 18px);
+  text-transform: uppercase;
   font: inherit;
   text-align: center;
-  text-transform: uppercase;
   border: none;
 
   &--green {
-    color: @green-button-text-color;
-    background-color: @green-button-color;
-
-    &:hover,
-    &:focus {
-      background-color: @green-button-color-hover;
-    }
-
-    &:active {
-      background-color: @green-button-color-active;
-      color: fade(@green-button-text-color, 30%);
-    }
+    .set-button(@green-button-text-color; @green-button-color; @green-button-hover; @green-button-active);
   }
 
   &--gray {
-    color: @grey-button-text-color;
-    background-color: @grey-button-background-color;
-
-    &:hover,
-    &:focus {
-      background-color: @grey-button-text-hover;
-    }
-
-    &:active {
-      background-color: @grey-button-text-active;
-      color: fade(@grey-button-text-color, 30%);
-    }
+    .set-button(@grey-button-text-color; @grey-button-background-color; @grey-button-hover; @grey-button-active);
   }
 }

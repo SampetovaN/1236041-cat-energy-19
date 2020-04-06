@@ -38,10 +38,44 @@
 
 .pick-label() {
   .text-color-sets(16px;18px;@label-color);
+  text-transform: uppercase;
+  cursor: pointer;
 
   &:active {
     color: fade(@label-color, 30%);
   }
+}
+
+.set-button(@color-text;@color;@color-hover;@color-active) {
+  color: @color-text;
+  background-color: @color;
+
+  &:hover,
+  &:focus {
+    background-color: @color-hover;
+  }
+
+  &:active {
+    background-color: @color-active;
+    color: fade(@color-text, 30%);
+  }
+}
+
+.set-product-title(@size;@height;@color) {
+  a {
+    .text-color-sets(16px;16px;@product-title-color);
+
+    &:hover,
+    &:focus {
+      color: fade(@product-title-color, 60%);
+    }
+
+    &:active {
+      color: fade(@product-title-color, 30%);
+    }
+  }
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .input-border () {
