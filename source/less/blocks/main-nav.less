@@ -1,9 +1,33 @@
+.main-nav {
+  position: relative;
+  @media (min-width: @width-tablet) {
+    margin-left: 96px;
+  }
+  @media (min-width: @width-desktop) {
+    margin-left: 535px;
+  }
+}
+
 .main-nav__toggle {
   border: none;
   background-color: transparent;
-  .set-outline();
+  position: relative;
+  left: 260px;
+  bottom: 25px;
+  @media (min-width: @width-tablet) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
-.main-nav__nav-list {
-  .set-outline();
-}

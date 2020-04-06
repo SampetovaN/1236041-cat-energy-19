@@ -1,4 +1,14 @@
 .wrapper {
+  min-width: 320px;
+  // tmp
   margin: 0 auto;
-  width: 320px;
+
+  @media (min-width: @width-tablet) {
+    min-width: @width-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    min-width: @width-desktop;
+  }
+
 }

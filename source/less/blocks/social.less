@@ -1,3 +1,19 @@
 .social__list {
   .list-refresh();
+  display: flex;
+  flex-direction: row;
+  padding: 25px 0;
+  border-top: 1px solid @copyright-border-color;
+  border-bottom: 1px solid @copyright-border-color;
+  @media (min-width: @width-tablet) {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+.social__item {
+  margin-right: 38px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
