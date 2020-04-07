@@ -21,7 +21,12 @@
 .site-list__item {
   .set-border();
   padding: 23px 0;
-  display: flex;
+
+  &--active {
+    a {
+      border-bottom: 2px solid @nav-border-active-color;
+    }
+  }
 
   @media (min-width: @width-tablet) {
     padding: 0;
@@ -31,6 +36,10 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:first-child {
+      border: none;
     }
   }
 
@@ -46,7 +55,7 @@
   }
 
   a {
-    margin: 0 auto;
+
     color: @nav-link-color-mobile;
     .set-link-nav(@nav-link-color-mobile);
 
@@ -59,8 +68,3 @@
   }
 }
 
-.site-list__item--active {
-  a {
-    border-bottom: 2px solid @nav-border-active-color;
-  }
-}

@@ -1,18 +1,32 @@
 .main-nav {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  @media (min-width: @width-tablet) {
-    margin-left: auto;
-    position: static;
+.main-nav__logo {
+  img {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 11px;
+    margin-left: 20px;
+    margin-right: 0;
+
+    @media (min-width: @width-tablet) {
+      margin: 0;
+    }
   }
 }
 
 .main-nav__toggle {
   border: none;
   background-color: transparent;
-  position: relative;
-  left: 260px;
-  bottom: 25px;
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 11px;
+  margin-right: 20px;
 
   @media (min-width: @width-tablet) {
     position: absolute;
@@ -28,5 +42,13 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+}
+
+.main-nav__nav-list {
+  flex-grow: 1;
+  @media (min-width: @width-tablet) {
+    flex-grow: 0;
+    margin-left: auto;
   }
 }

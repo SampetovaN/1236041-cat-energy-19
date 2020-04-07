@@ -1,3 +1,16 @@
+.product {
+  padding: 20px 25px;
+
+  @media (min-width: @width-tablet) {
+    padding: 80px 80px;
+    border: none;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 24px 24px;
+  }
+}
+
 .product__title {
   .set-product-title(16px;20px;@product-title-color);
 }

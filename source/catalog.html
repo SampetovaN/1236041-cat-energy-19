@@ -8,25 +8,23 @@
   </head>
   <body>
     <header class="header">
-      <div class="wrapper header__wrapper">
-        <a class="header__logo" href="index.html">
-          <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
+      <nav class="main-nav">
+        <a class="main-nav__logo">
+          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия меню">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="19" viewBox="0 0 24 18"style="enable-background:new 0 0 24 18;" xml:space="preserve">
+        <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия меню">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="19" viewBox="0 0 24 18"style="enable-background:new 0 0 24 18;" xml:space="preserve">
               <rect y="16" width="24" height="2"/>
-              <rect y="8" width="24" height="2"/>
-              <rect width="24" height="2"/>
+            <rect y="8" width="24" height="2"/>
+            <rect width="24" height="2"/>
             </svg>
-          </button>
-          <ul class="main-nav__nav-list site-list">
-            <li class="site-list__item"><a href="index.html">Главная</a></li>
-            <li class="site-list__item site-list__item--active"><a href="">Каталог продукции</a></li>
-            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
-          </ul>
-        </nav>
-      </div>
+        </button>
+        <ul class="main-nav__nav-list site-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item site-list__item--active"><a href="">Каталог продукции</a></li>
+          <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
       <section class="catalog">
@@ -249,14 +247,12 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="wrapper">
-          <div class="contacts__text">
-            <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
-          <div class="contacts__map-wrapper" aria-label="улица Большая Конюшенная, дом 19/8, город Санкт-Петербург">
-            <div class="contacts__pin-wrapper" aria-label="Указание адреса на карте"></div>
-          </div>
+        <div class="contacts__text">
+          <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <div class="contacts__map-wrapper" aria-label="улица Большая Конюшенная, дом 19/8, город Санкт-Петербург">
+          <div class="contacts__pin-wrapper" aria-label="Указание адреса на карте"></div>
         </div>
       </section>
     </main>
