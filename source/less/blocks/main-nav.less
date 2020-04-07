@@ -1,10 +1,9 @@
 .main-nav {
   position: relative;
+
   @media (min-width: @width-tablet) {
-    margin-left: 96px;
-  }
-  @media (min-width: @width-desktop) {
-    margin-left: 538px;
+    margin-left: auto;
+    position: static;
   }
 }
 
@@ -14,6 +13,7 @@
   position: relative;
   left: 260px;
   bottom: 25px;
+
   @media (min-width: @width-tablet) {
     position: absolute;
 
@@ -30,4 +30,3 @@
     overflow: hidden;
   }
 }
-

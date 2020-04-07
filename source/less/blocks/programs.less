@@ -3,9 +3,11 @@
   padding: 23px 20px;
   display: flex;
   flex-direction: column;
+
   @media (min-width: @width-tablet) {
     padding: 0 30px 55px;
   }
+
   @media (min-width: @width-desktop) {
     padding: 0 50px;
     display: flex;
@@ -26,9 +28,11 @@
     margin-bottom: 30px;
     .last-child-margin();
   }
+
   @media (min-width: @width-desktop) {
     padding: 45px 24px;
     margin-right: 80px;
+
     &:last-child {
       margin-right: 0;
     }
@@ -39,9 +43,11 @@
   .text-color-sets(24px;37px;@program-text-color);
   text-transform: uppercase;
   margin: 0;
+
   @media (min-width: @width-tablet) {
     .text-color-sets(36px;37px;@program-text-color);
   }
+
   @media (min-width: @width-desktop) {
     .text-color-sets(36px;37px;@program-text-color);
   }
@@ -54,7 +60,8 @@
 .programs__desc {
   .sets-paragraph(14px;18px);
   border-bottom: 1px solid @paragraph-border-color;
-  @media (min-width: @width-tablet) and (min-width: @width-desktop) {
+
+  @media (min-width: @width-tablet) {
     border-bottom: 0;
     .sets-paragraph(16px;24px);
   }
@@ -67,7 +74,8 @@
   &:active {
     color: fade(@program-link-color, 30%);
   }
-  @media (min-width: @width-tablet) and (min-width: @width-desktop) {
+
+  @media (min-width: @width-tablet) {
     .text-color-sets(20px;20px; @program-link-color);
   }
 }

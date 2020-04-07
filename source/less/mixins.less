@@ -108,3 +108,16 @@
   }
   border-bottom: 1px solid @product-item-border;
 }
+
+.set-link-nav(@color) {
+  color: @color;
+
+  &:hover,
+  &:focus {
+    color: fade(@color, 60%);
+  }
+
+  &:active {
+    color: fade(@color, 30%);
+  }
+}
