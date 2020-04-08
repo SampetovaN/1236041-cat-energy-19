@@ -1,12 +1,25 @@
+.contacts {
+  @media (min-width: @width-desktop) {
+    position: relative;
+  }
+}
+
 .contacts__text {
   padding: 5px 20px 27px;
+  background-color: @contacts-background-color;
+
+  &--index {
+    background-color: @background-color;
+  }
 
   @media (min-width: @width-tablet) {
+    background-color: @background-color;
     padding: 70px 70px;
   }
 
   @media (min-width: @width-desktop) {
     padding: 70px 76px;
+    position: absolute;
   }
 }
 

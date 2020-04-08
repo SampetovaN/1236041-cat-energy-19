@@ -9,7 +9,8 @@
 }
 
 .form__questions {
-  //.set-outline(red);
+  display: flex;
+  flex-direction: column;
 }
 
 .form__legend {
@@ -27,13 +28,24 @@
   .list-refresh();
 }
 
-.form__button {
-  //.set-outline(red);
+.form__rest {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @width-tablet) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .form__footnote {
   .sets-paragraph(14px;16px);
   margin: 0;
+  text-align: center;
   padding: 20px 0 30px;
-  //.set-outline(red);
+
+  @media (min-width: @width-tablet) {
+    padding: 0;
+    text-align: start;
+  }
 }
