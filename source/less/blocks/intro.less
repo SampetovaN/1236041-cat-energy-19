@@ -1,4 +1,4 @@
-.intro__wrapper {
+.intro__section-wrapper {
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   position: relative;
@@ -7,19 +7,104 @@
     content: "";
     background-color: silver;
     position: absolute;
-    width: 100%;
+    width: 280px;
     height: 50%;
     top: 0;
     z-index: -1;
   }
+
+  @media (min-width: @width-tablet) {
+    &::after {
+      content: "";
+      background-color: transparent;
+    }
+    background-image: none;
+  }
+}
+
+.intro__image-wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -70px;
+
+  @media (min-width: @width-tablet) {
+    z-index: -1;
+    left: 50%;
+    margin-left: -140px;
+  }
+
+  @media (min-width: @width-desktop) {
+    z-index: -1;
+    left: 50%;
+    margin-left: -140px;
+  }
+}
+
+.intro__text {
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    width: 413px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 90px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 417px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 31px;
+    margin-top: 80px;
+  }
 }
 
 .intro__title {
-  .text-color-sets(36px;36px; @intro-text-color);
+  text-align: center;
+  padding: 40px 0 21px;
   margin: 0;
+  .text-color-sets(36px;36px; @intro-text-color);
+
+  @media (min-width: @width-tablet) {
+    .text-color-sets(60px;60px; @intro-text-color-tablet);
+    text-align: start;
+    padding: 0;
+    margin-top: 40px;
+  }
 }
 
 .intro__desc {
-  .text-color-sets(14px;14px; @intro-text-color);
+  margin: 0;
+  text-align: center;
   text-transform: uppercase;
+  .text-color-sets(14px;14px; @intro-text-color);
+
+  @media (min-width: @width-tablet) {
+    .text-color-sets(20px;20px; @intro-text-color-tablet);
+    text-align: start;
+    margin: 45px 0 49px;
+  }
+}
+
+.intro__button {
+  display: block;
+  margin-top: 300px;
+  padding: 10px 73px;
+
+  @media (min-width: @width-tablet) {
+    margin: 0;
+    margin-bottom: 529px;
+    padding: 10px 22px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin: 0;
+    margin-bottom: 270px;
+    padding: 10px 25px;
+  }
 }

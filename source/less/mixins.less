@@ -108,3 +108,31 @@
   }
   border-bottom: 1px solid @product-item-border;
 }
+
+.set-link-nav(@color) {
+  color: @color;
+
+  &:hover,
+  &:focus {
+    color: fade(@color, 60%);
+  }
+
+  &:active {
+    color: fade(@color, 30%);
+  }
+}
+
+.wrapper-reset () {
+  padding: 0;
+  width: 320px;
+
+  @media (min-width: @width-tablet) {
+    padding: 24px 30px;
+    width: @width-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 55px 110px;
+    width: @width-desktop;
+  }
+}

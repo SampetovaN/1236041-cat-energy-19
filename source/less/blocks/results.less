@@ -1,24 +1,56 @@
 .results__wrapper {
   background-color: @results-background-color;
+
+  @media (min-width: @width-tablet) {
+    background: linear-gradient(180deg, @background-color 60%, @results-background-color 60%);
+  }
+
+  @media (min-width: @width-desktop) {
+    background: linear-gradient(180deg, @background-color 30%, @results-background-color 30%);
+  }
+}
+
+.results__content {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @width-desktop) {
+    flex-direction: row;
+  }
 }
 
 .results__title {
   .text-color-sets(36px;60px;@results-title-color);
   margin: 0;
+
+  @media (min-width: @width-tablet) {
+    .text-sets(60px;60px);
+    margin-bottom: 80px;
+  }
+}
+
+.results__info {
+  @media (min-width: @width-desktop) {
+    width: 570px;
+    margin-right: 80px;
+  }
 }
 
 .results__desc {
   .sets-paragraph(14px;18px);
-}
 
-.results__info {
-  .set-outline();
-  padding: 0 20px 38px;
+  @media (min-width: @width-tablet) {
+    .sets-paragraph(16px;24px);
+  }
 }
 
 .results__amount {
   .text-color-sets(24px;24px;@results-amount-color);
   text-transform: uppercase;
+
+  @media (min-width: @width-tablet) {
+    .text-sets(30px;37px);
+  }
 }
 
 .results__text {
@@ -28,16 +60,20 @@
 .results__money {
   .text-color-sets(14px;20px;@results-amount-color);
   text-transform: uppercase;
+
+  @media (min-width: @width-tablet) {
+    .text-sets(20px;20px);
+  }
 }
 
 .results__appearance {
-  .set-outline();
-  padding: 0 20px 63px;
+  @media (min-width: @width-desktop) {
+    width: 570px;
+  }
 }
 
 .results__image-wrapper {
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
-  width: 311px;
   height: 232px;
 }
