@@ -127,12 +127,36 @@
   width: 320px;
 
   @media (min-width: @width-tablet) {
-    padding: 24px 30px;
+    padding: 0 30px;
     width: @width-tablet;
   }
 
   @media (min-width: @width-desktop) {
-    padding: 55px 110px;
+    padding: 0 110px;
     width: @width-desktop;
   }
+}
+
+.reset-pseudo-el () {
+  content: "";
+  position: static;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+
+.reset-el () {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

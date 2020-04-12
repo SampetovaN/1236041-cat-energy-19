@@ -15,8 +15,7 @@
 
   @media (min-width: @width-tablet) {
     &::after {
-      content: "";
-      background-color: transparent;
+      .reset-pseudo-el();
     }
     background-image: none;
   }
@@ -30,16 +29,35 @@
   margin-left: -140px;
   margin-top: -70px;
 
+
   @media (min-width: @width-tablet) {
     z-index: -1;
-    left: 50%;
-    margin-left: -140px;
+    left: 0;
+    margin-left: 30px;
+    margin-top: -204px;
+    width: 709px;
   }
 
   @media (min-width: @width-desktop) {
-    z-index: -1;
+    z-index: 1;
     left: 50%;
-    margin-left: -140px;
+    margin-left: -160px;
+    margin-top: -360px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-color: silver;
+      width: 720px;
+      height: 696px;
+      left: 0;
+      top: 0;
+      margin-top: -140px;
+      margin-left: 160px;
+    }
+
   }
 }
 
@@ -47,26 +65,23 @@
   box-sizing: border-box;
 
   @media (min-width: @width-tablet) {
-    width: 413px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 90px;
+    margin-top: 45px;
   }
 
   @media (min-width: @width-desktop) {
-    width: 417px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 31px;
-    margin-top: 80px;
+    margin-left: 80px;
+    margin-top: 50px;
   }
 }
 
 .intro__title {
   text-align: center;
-  padding: 40px 0 21px;
+  padding: 29px 0 23px;
   margin: 0;
   .text-color-sets(36px;36px; @intro-text-color);
 
@@ -74,7 +89,6 @@
     .text-color-sets(60px;60px; @intro-text-color-tablet);
     text-align: start;
     padding: 0;
-    margin-top: 40px;
   }
 }
 
@@ -87,24 +101,24 @@
   @media (min-width: @width-tablet) {
     .text-color-sets(20px;20px; @intro-text-color-tablet);
     text-align: start;
-    margin: 45px 0 49px;
+    margin: 45px 0 50px;
   }
 }
 
 .intro__button {
   display: block;
   margin-top: 300px;
-  padding: 10px 73px;
+  padding: 11px 73px;
 
   @media (min-width: @width-tablet) {
     margin: 0;
     margin-bottom: 529px;
-    padding: 10px 22px;
+    padding: 15px 26px;
   }
 
   @media (min-width: @width-desktop) {
     margin: 0;
     margin-bottom: 270px;
-    padding: 10px 25px;
+    padding: 18px 26px;
   }
 }

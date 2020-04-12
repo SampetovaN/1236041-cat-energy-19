@@ -4,6 +4,9 @@
   font: inherit;
   text-align: center;
   border: none;
+  @media (min-width: @width-tablet) {
+    .text-sets(20px; 20px);
+  }
 
   &--green {
     .set-button(@green-button-text-color; @green-button-color; @green-button-hover; @green-button-active);
