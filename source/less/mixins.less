@@ -160,3 +160,17 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.generate-numbers(@n) when (@n > 0) {
+  &--@{n} {
+    &::after {
+      content: `@{n}`;
+      .text-color-sets(281px;281px; #f2f2f2);
+      position: absolute;
+      top: -72px;
+      left: 120px;
+      z-index: -1;
+    }
+  }
+  .generate-numbers(@n - 1);
+}
