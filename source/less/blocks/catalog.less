@@ -6,9 +6,11 @@
   .text-color-sets(36px;60px;@catalog-title-color);
   text-transform: none;
   margin: 0;
-  padding: 0 20px;
+  padding: 18px 20px 27px;
+  border-top: 1px solid @catalog-title-border-color;
 
   @media (min-width: @width-tablet) {
+    border: none;
     margin-top: 44px;
     padding: 0;
   }
@@ -20,13 +22,8 @@
 }
 
 .catalog__item-wrapper {
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: @width-tablet) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     margin-top: 135px;
     margin-bottom: 72px;
   }
