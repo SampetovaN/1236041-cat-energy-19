@@ -1,5 +1,5 @@
 .product {
-  padding: 0px 20px;
+  padding: 0 20px 26px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -13,7 +13,6 @@
     border: none;
     background-color: @background-color-product;
     position: relative;
-
   }
 
   @media (min-width: @width-desktop) {
@@ -23,7 +22,6 @@
 }
 
 .product__content {
-
   @media (min-width: @width-tablet) {
     display: flex;
     flex-direction: column;
@@ -51,16 +49,17 @@
   margin-bottom: 12px;
 
   @media (min-width: @width-tablet) {
-
     a {
       .text-sets(20px;20px;);
     }
+
     width: 130px;
     text-align: center;
     align-self: center;
     margin: 0;
     margin-top: -2px;
   }
+
   @media (min-width: @width-desktop) {
     margin-top: 12px;
   }
@@ -94,6 +93,7 @@
     padding-bottom: 7px;
     padding-top: 6px;
   }
+
   @media (min-width: @width-desktop) {
     padding-bottom: 7px;
     padding-top: 8px;
@@ -121,4 +121,3 @@
     padding: 8px 56px;
   }
 }
-
