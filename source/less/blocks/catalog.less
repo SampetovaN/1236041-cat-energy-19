@@ -15,8 +15,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    margin: 0;
-    padding: 0;
+    margin-top: 22px;
   }
 }
 
@@ -27,13 +26,14 @@
   @media (min-width: @width-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     margin-top: 163px;
     margin-bottom: 72px;
   }
 
   @media (min-width: @width-desktop) {
-    margin-top: 130px;
-    margin-bottom: 0;
+    margin-top: 163px;
+    margin-bottom: 80px;
   }
 }
 
@@ -41,7 +41,7 @@
 
   @media (min-width: @width-tablet) {
     border: none;
-    margin-bottom: 142px;
+    margin-bottom: 141px;
 
     &:first-child {
       border: none;
@@ -58,15 +58,18 @@
 
   @media (min-width: @width-desktop) {
     border: none;
-    margin-bottom: 142px;
+    margin-bottom: 137px;
     margin-right: 80px;
 
     &:nth-child(odd) {
       margin-right: 80px;
     }
 
-    &:last-child {
+    &:nth-child(4n) {
       margin-right: 0;
+    }
+    &:nth-last-child(-n+4) {
+      margin-bottom: 0;
     }
   }
 }
@@ -74,10 +77,21 @@
 .catalog__more {
   padding: 20px 20px;
   border-bottom: 2px solid #f7f7f7;
+
+  @media (min-width: @width-tablet) {
+    padding: 102px 38px 40px;
+    width: 324px;
+    box-sizing: border-box;
+    border: 2px solid #f7f7f7;
+  }
+  @media (min-width: @width-desktop) {
+    width: 245px;
+    padding: 104px 35px 44px;
+  }
 }
 
 .catalog__show-more {
-  padding-top: 59px;
+  padding-top: 60px;
   margin: 0;
   .text-color-sets(16px;20px;@catalog-title-color);
   text-transform: uppercase;
@@ -98,6 +112,16 @@
   &::before {
     transform: rotate(90deg);
   }
+
+  @media (min-width: @width-tablet) {
+    .text-sets(20px;20px;);
+
+    &::before,
+    &::after {
+      height: 60px;
+      top: -50px;
+    }
+  }
 }
 
 .catalog__promo {
@@ -105,6 +129,22 @@
   text-align: center;
   margin: 9px 0 20px;
 
+  br {
+    display: none;
+  }
+
+  @media (min-width: @width-tablet) {
+    .text-sets(16px;16px;);
+    margin: 30px 27px 88px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    margin: 28px 0 86px;
+  }
 }
 
 .catalog__link {
@@ -112,4 +152,12 @@
   display: block;
   margin: 0 auto;
   padding: 11px 89px;
+
+  @media (min-width: @width-tablet) {
+    padding: 11px 75px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 11px 35px;
+  }
 }
