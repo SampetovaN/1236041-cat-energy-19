@@ -10,6 +10,18 @@
   }
 }
 
+.results__title {
+  .text-color-sets(36px;60px;@results-title-color);
+  margin: 0;
+  padding-top: 15px;
+  margin-bottom: 24px;
+
+  @media (min-width: @width-tablet) {
+    .text-sets(60px;60px);
+    margin-bottom: 80px;
+  }
+}
+
 .results__content {
   display: flex;
   flex-direction: column;
@@ -19,33 +31,50 @@
   }
 }
 
-.results__title {
-  .text-color-sets(36px;60px;@results-title-color);
-  margin: 0;
-
-  @media (min-width: @width-tablet) {
-    .text-sets(60px;60px);
-    margin-bottom: 80px;
-  }
-}
-
 .results__info {
+  margin-bottom: 36px;
+
   @media (min-width: @width-desktop) {
     width: 570px;
     margin-right: 80px;
+
   }
 }
 
 .results__desc {
   .sets-paragraph(14px;18px);
+  margin: 0;
+  padding-right: 10px;
+  margin-bottom: 25px;
 
   @media (min-width: @width-tablet) {
     .sets-paragraph(16px;24px);
   }
 }
 
+.results__counts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.results__item {
+  box-sizing: border-box;
+  width: 124px;
+  padding: 15px 0;
+  text-align: center;
+  border-top: 1px solid #cdcdcd;
+  border-right: 1px solid #cdcdcd;
+  border-left: 1px solid #cdcdcd;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 35px;
+}
+
 .results__amount {
-  .text-color-sets(24px;24px;@results-amount-color);
+    .text-color-sets(24px;24px;@results-amount-color);
+  margin: 0;
   text-transform: uppercase;
 
   @media (min-width: @width-tablet) {
@@ -53,8 +82,35 @@
   }
 }
 
+
+
 .results__text {
-  .sets-paragraph(14px;14px);
+  .sets-paragraph(12px;12px);
+  margin: 0;
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  left: 2px;
+  bottom: -14px;
+
+  &::after,
+  &::before {
+    content: "";
+    height: 1px;
+    width: 19px;
+    background-color: #cdcdcd;
+
+  }
+}
+
+.results__money {
+  .text-color-sets(14px;20px;@results-amount-color);
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  @media (min-width: @width-tablet) {
+    .text-sets(20px;20px);
+  }
 }
 
 .results__money {
@@ -67,6 +123,7 @@
 }
 
 .results__appearance {
+
   @media (min-width: @width-desktop) {
     width: 570px;
   }
@@ -76,4 +133,10 @@
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   height: 232px;
+  background-position: center;
+  margin-bottom: 37px;
 }
+.results__slider {
+  padding-bottom: 34px;
+}
+

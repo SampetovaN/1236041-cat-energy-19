@@ -5,12 +5,12 @@
 }
 
 .text-color-sets(@size;@height;@color;@weight:normal) {
-  .text-sets(@size;@height);
+  .text-sets(@size; @height);
   color: @color;
 }
 
 .sets-paragraph(@size;@height) {
-  .text-color-sets(@size;@height;@paragraph-color);
+  .text-color-sets(@size; @height; @paragraph-color);
   font-family: "Arial", sans-serif;
   text-transform: none;
 }
@@ -37,7 +37,7 @@
 }
 
 .pick-label() {
-  .text-color-sets(16px;18px;@label-color);
+  .text-color-sets(16px; 18px; @label-color);
   text-transform: uppercase;
   cursor: pointer;
 
@@ -63,7 +63,7 @@
 
 .set-product-title(@size;@height;@color) {
   a {
-    .text-color-sets(16px;16px;@product-title-color);
+    .text-color-sets(16px; 16px; @product-title-color);
 
     &:hover,
     &:focus {
@@ -96,10 +96,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-// временный миксин
-.set-outline (@color:black) {
-  outline: 2px solid @color;
 }
 
 .set-border() {
@@ -159,4 +155,21 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.form-set () {
+  padding: 0;
+  width: 100%;
+}
+
+.reset-fieldset-wrapper() {
+  padding: 0 20px;
+
+  @media (min-width: @width-tablet) {
+    padding: 0 68px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0 110px;
+  }
 }

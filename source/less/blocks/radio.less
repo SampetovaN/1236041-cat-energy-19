@@ -1,3 +1,46 @@
 .radio__label {
   .pick-label();
+  padding-left: 47px;
+  position: relative;
+
+  input[type="radio"] {
+    + .radio__indicator {
+      position: absolute;
+      width: 28px;
+      height: 27px;
+      border: solid 1px #cdcdcd;
+      border-radius: 100%;
+      background-color: #ffffff;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  input[type="radio"]:focus,
+  input[type="radio"]:hover {
+    + .radio__indicator {
+      border: solid 1px #bababa;
+    }
+  }
+
+  input[type="radio"]:active {
+    + .radio__indicator {
+      opacity: 0.3;
+    }
+  }
+
+  input[type="radio"]:checked {
+    + .radio__indicator {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 8px;
+        left: 8px;
+        border-radius: 100%;
+        background-color: #68b738;
+      }
+    }
+  }
 }

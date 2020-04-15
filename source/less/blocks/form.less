@@ -1,22 +1,59 @@
+.form {
+  .form-set();
+}
+
 .form__title {
-  .text-color-sets(36px;60px;@form-title-color);
+  .text-color-sets(36px; 60px; @form-title-color);
+  padding: 0 20px;
   margin: 0;
+  margin-top: 14px;
+  margin-bottom: 26px;
 }
 
 .form__desc {
-  .text-color-sets(14px;18px;@form-desc-color);
+  .text-color-sets(14px; 18px; @form-desc-color);
   text-transform: uppercase;
+  padding: 0 20px;
+  margin: 0;
+  margin-right: 10px;
 }
 
 .form__questions {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.form__field {
+  .reset-fieldset-wrapper();
 }
 
 .form__legend {
-  .text-color-sets(24px;24px;@legend-color);
+  .text-color-sets(24px; 24px; @legend-color);
   text-transform: none;
+  padding-left: 20px;
+  padding-top: 29px;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 99px;
+    height: 4px;
+    background-color: #68b738;
+    flex-shrink: 0;
+    margin-bottom: 14px;
+  }
 }
+
+.form__field {
+  margin-bottom: 15px;
+  .last-child-margin();
+}
+ .form__field-contacts {
+   margin-top: 12px;
+ }
 
 .form__program-pick {
   border-bottom: 1px solid @fieldset-border-color;
@@ -26,9 +63,19 @@
 .form__radio-list,
 .form__checkbox-list {
   .list-refresh();
+  .reset-fieldset-wrapper();
 }
 
+.form__radio {
+  margin-bottom: 24px;
+  .last-child-margin();
+}
+
+.form__textarea-wrapper {
+  .reset-fieldset-wrapper();
+}
 .form__rest {
+  .reset-fieldset-wrapper();
   display: flex;
   flex-direction: column;
 
@@ -39,7 +86,7 @@
 }
 
 .form__footnote {
-  .sets-paragraph(14px;16px);
+  .sets-paragraph(14px; 16px);
   margin: 0;
   text-align: center;
   padding: 20px 0 30px;

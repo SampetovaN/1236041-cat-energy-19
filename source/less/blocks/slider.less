@@ -1,8 +1,49 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__line {
+  width: 84px;
+  height: 14px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #cdcdcd;
+  position: relative;
+  margin: 0 11px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    border-radius: 12px;
+    top: 3px;
+    left: 8px;
+    background-color: #68b738;;
+  }
+}
+
 .slider__button {
   .text-color-sets(16px;20px;@button-slider-text-color;@weight:normal);
   text-transform: uppercase;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
   outline: none;
-  padding: 0;
+
+   &:focus,
+   &:hover {
+     text-decoration: underline;
+     text-decoration-style: dotted;
+     text-decoration-color: #ececec;
+   }
+
+  &:active {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #f2f2f2;
+  }
 }
