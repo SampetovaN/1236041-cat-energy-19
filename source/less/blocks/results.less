@@ -2,23 +2,41 @@
   background-color: @results-background-color;
 
   @media (min-width: @width-tablet) {
-    background: linear-gradient(180deg, @background-color 60%, @results-background-color 60%);
+    background-color: @background-color;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    &::after {
+      content: "";
+      background: linear-gradient(90deg, #f2f2f2 50%, #eaeaea 50%);
+      position: absolute;
+      height: 462px;
+      width: 100%;
+      top: 57.5%;
+      left: 0;
+    }
+  }
+
+/*  @media (min-width: @width-tablet) {
+    background: linear-gradient(180deg, @background-color 50%, @results-background-color 50%);
   }
 
   @media (min-width: @width-desktop) {
     background: linear-gradient(180deg, @background-color 30%, @results-background-color 30%);
-  }
+  }*/
 }
 
 .results__title {
-  .text-color-sets(36px;60px;@results-title-color);
+  .text-color-sets(36px; 60px; @results-title-color);
+  border-top: 1px solid #ededed;
   margin: 0;
-  padding-top: 15px;
   margin-bottom: 24px;
+  padding-top: 16px;
 
   @media (min-width: @width-tablet) {
-    .text-sets(60px;60px);
-    margin-bottom: 80px;
+    .text-sets(60px; 60px);
+    margin-bottom: 65px;
+    padding: 41px 30px 0;
   }
 }
 
@@ -34,21 +52,27 @@
 .results__info {
   margin-bottom: 36px;
 
+  @media (min-width: @width-tablet) {
+    margin-bottom: 96px;
+    padding: 0 30px;
+  }
+
   @media (min-width: @width-desktop) {
     width: 570px;
     margin-right: 80px;
-
+    margin-bottom: 96px;
   }
 }
 
 .results__desc {
-  .sets-paragraph(14px;18px);
+  .sets-paragraph(14px; 18px);
   margin: 0;
   padding-right: 10px;
   margin-bottom: 25px;
 
   @media (min-width: @width-tablet) {
-    .sets-paragraph(16px;24px);
+    .sets-paragraph(16px; 24px);
+    margin-bottom: 51px;
   }
 }
 
@@ -57,6 +81,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @width-tablet) {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 }
 
 .results__item {
@@ -70,73 +99,111 @@
   border-radius: 3px;
   position: relative;
   margin-bottom: 35px;
+
+  @media (min-width: @width-tablet) {
+    margin: 0;
+    width: 161px;
+    padding: 17px 0;
+    margin-right: 45px;
+
+     &:last-of-type {
+       margin-right: 0;
+     }
+  }
 }
 
 .results__amount {
-    .text-color-sets(24px;24px;@results-amount-color);
+  .text-color-sets(24px; 24px; @results-amount-color);
   margin: 0;
   text-transform: uppercase;
 
   @media (min-width: @width-tablet) {
-    .text-sets(30px;37px);
+    .text-sets(30px; 37px);
   }
 }
 
 
-
 .results__text {
-  .sets-paragraph(12px;12px);
+  .sets-paragraph(12px; 12px);
   margin: 0;
   position: absolute;
   display: flex;
   align-items: baseline;
-  left: 2px;
   bottom: -14px;
+  width: 100%;
 
   &::after,
   &::before {
     content: "";
     height: 1px;
-    width: 19px;
+    width: 100%;
     background-color: #cdcdcd;
+  }
 
+  &::after {
+    margin-left: 10px;
+  }
+
+  &::before {
+    margin-right: 10px;
+  }
+
+  @media (min-width: @width-tablet) {
+    .sets-paragraph(14px; 14px);
   }
 }
 
 .results__money {
-  .text-color-sets(14px;20px;@results-amount-color);
+  .text-color-sets(14px; 20px; @results-amount-color);
   text-transform: uppercase;
   display: block;
   margin: 0 auto;
-  @media (min-width: @width-tablet) {
-    .text-sets(20px;20px);
-  }
-}
-
-.results__money {
-  .text-color-sets(14px;20px;@results-amount-color);
-  text-transform: uppercase;
 
   @media (min-width: @width-tablet) {
-    .text-sets(20px;20px);
+    .text-sets(20px; 20px);
+    margin: 0;
+    margin-left: auto;
+    width: 175px;
+    text-align: right;
   }
 }
 
 .results__appearance {
+  @media (min-width: @width-tablet) {
+    z-index: 5;
+  }
 
   @media (min-width: @width-desktop) {
     width: 570px;
   }
+
 }
 
 .results__image-wrapper {
-  background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   height: 232px;
   background-position: center;
   margin-bottom: 37px;
+  background-image: url("../img/before-mobile@1x.png");
+
+  @media (min-width: @width-tablet) {
+    height: 499px;
+    background-position: 45px;
+    margin-bottom: 28px;
+    background-image: url("../img/before-tablet@1x.png");
+  }
+
 }
+
 .results__slider {
   padding-bottom: 34px;
+
+
+  @media (min-width: @width-tablet) {
+    padding-bottom: 72px;
+  }
+
 }
+
+
 
