@@ -45,27 +45,25 @@
   cursor: pointer;
   outline: none;
   display: block;
+  padding: 0;
+/*  margin-bottom: -7px;
+  padding-bottom: 5px;*/
 
   &:focus,
   &:hover {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: fade(#d9d9d9, 23%);
+    padding-bottom: 2px;
+    border-bottom: 1px dotted fade(#111111, 23%);
   }
 
   &:active {
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-color: #111111;
+    padding-bottom: 2px;
+    border-bottom: 1px solid fade(#111111, 40%);
   }
 
   @media (min-width: @width-tablet) {
     .text-sets(20px; 20px;);
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    /*    padding-bottom: 2px;
-        border-bottom: 1px dotted fade(#111111, 23%);*/
-    text-decoration-color: fade(#111111, 23%);
+    padding-bottom: 2px;
+    border-bottom: 1px dotted fade(#111111, 23%);
   }
 }
 

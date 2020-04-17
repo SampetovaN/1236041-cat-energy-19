@@ -10,29 +10,31 @@
 
   @media (min-width: @width-tablet) {
     .text-sets(60px;60px;);
-    margin-top: 37px;
+    margin-top: 32px;
+    margin-bottom: 101px;
     padding: 0;
   }
 
   @media (min-width: @width-desktop) {
     margin-top: 22px;
+    margin-bottom: 94px;
   }
 }
 
 .catalog__item-wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 29px;
 
   @media (min-width: @width-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 163px;
-    margin-bottom: 72px;
+    justify-content: space-between;
+    margin-bottom: 65px;
   }
 
   @media (min-width: @width-desktop) {
-    margin-top: 163px;
     margin-bottom: 80px;
   }
 }
@@ -46,14 +48,11 @@
 
   @media (min-width: @width-tablet) {
     border: none;
-    margin-bottom: 141px;
+    margin-bottom: 78px;
+    margin-top: 63px;
 
     &:first-child {
       border: none;
-    }
-
-    &:nth-child(odd) {
-      margin-right: 60px;
     }
 
     &:nth-last-child(-n+2) {
@@ -63,16 +62,8 @@
 
   @media (min-width: @width-desktop) {
     border: none;
-    margin-bottom: 137px;
-    margin-right: 80px;
-
-    &:nth-child(odd) {
-      margin-right: 80px;
-    }
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
+    margin-bottom: 67px;
+    margin-top: 70px;
 
     &:nth-last-child(-n+4) {
       margin-bottom: 0;
@@ -82,17 +73,20 @@
 
 .catalog__more {
   padding: 20px 20px;
+  border-bottom: 1px solid @catalog-product-border-color;
 
   @media (min-width: @width-tablet) {
-    padding: 101px 38px 36px;
+    padding: 56px 38px 40px;
     width: 324px;
     box-sizing: border-box;
+    margin-top: 55px;
     border: 2px solid #f7f7f7;
   }
 
   @media (min-width: @width-desktop) {
     width: 245px;
-    padding: 104px 35px 41px;
+    padding: 56px 35px 40px;
+    margin-top: 70px;
   }
 }
 
@@ -125,15 +119,26 @@
 
   @media (min-width: @width-tablet) {
     .text-sets(20px;20px;);
+    padding-top: 112px;
 
     &::before,
     &::after {
       height: 60px;
-      top: -46px;
+      top: 0;
     }
 
     br {
       display: block;
+    }
+  }
+  @media (min-width: @width-desktop) {
+
+    padding-top: 113px;
+
+    &::before,
+    &::after {
+      height: 60px;
+      top: 0;
     }
   }
 }
@@ -149,7 +154,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    margin: 28px 0 86px;
+    margin: 24px 0 86px;
   }
 }
 

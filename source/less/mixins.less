@@ -98,11 +98,11 @@
   }
 }
 
-.set-border() {
+.set-border(@color:@product-item-border) {
   &:first-child {
-    border-top: 1px solid @product-item-border;
+    border-top: 1px solid @color;
   }
-  border-bottom: 1px solid @product-item-border;
+  border-bottom: 1px solid @color;
 }
 
 .set-link-nav(@color) {
