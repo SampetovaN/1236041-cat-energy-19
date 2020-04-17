@@ -1,20 +1,123 @@
 .product {
-  padding: 20px 25px;
+  padding: 0 20px 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 
   @media (min-width: @width-tablet) {
-    padding: 80px 80px;
+    padding: 168px 38px 40px;
+    box-sizing: border-box;
+    display: block;
+    width: 324px;
     border: none;
+    background-color: @background-color-product;
+    position: relative;
   }
 
   @media (min-width: @width-desktop) {
-    padding: 24px 24px;
+    width: 245px;
+    padding: 151px 38px 44px;
+  }
+}
+
+.product__content {
+  @media (min-width: @width-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product__link {
+  @media (min-width: @width-tablet) {
+    position: absolute;
+    left: 0;
+
+    &--big {
+      top: -80px;
+    }
+
+    &--small {
+      top: -44px;
+    }
   }
 }
 
 .product__title {
+  width: 75px;
   .set-product-title(16px;20px;@product-title-color);
+  margin-bottom: 12px;
+
+  @media (min-width: @width-tablet) {
+    a {
+      .text-sets(20px;20px;);
+    }
+
+    width: 130px;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+    margin-top: -2px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-top: 12px;
+  }
+}
+
+.product__table {
+  width: 140px;
+  border-collapse: collapse;
+
+  @media (min-width: @width-tablet) {
+    width: auto;
+    margin: 20px 0;
+  }
 }
 
 .product__td {
   .sets-paragraph(12px;16px);
+  text-align: left;
+
+  &:first-child {
+    text-align: left;
+  }
+
+  &:last-child {
+    text-align: right;
+  }
+
+  @media (min-width: @width-tablet) {
+    .text-sets(16px;16px);
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 7px;
+    padding-top: 6px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-bottom: 7px;
+    padding-top: 8px;
+  }
+}
+
+.product__button {
+  .text-sets(16px; 20px);
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  flex-grow: 1;
+  margin: 0;
+  padding: 8px 111px;
+
+  @media (min-width: @width-tablet) {
+    width: auto;
+    flex-grow: 0;
+    padding: 8px 94px;
+    margin-top: 18px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-top: 15px;
+    padding: 8px 56px;
+  }
 }

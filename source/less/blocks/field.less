@@ -1,9 +1,51 @@
+.field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &--email,
+  &--phone {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      right: 34px;
+    }
+  }
+
+  &--email {
+
+    &::after {
+      background-image: url("../img/icon-mail.svg");
+      width: 18px;
+      height: 14px;
+    }
+  }
+
+  &--phone {
+
+    &::after {
+      background-image: url("../img/icon-phone.svg");
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
 .field__label {
   .text-color-sets(16px;18px;@label-color);
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .field__input {
   .placeholder-style();
   .input-border();
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 14px;
+  padding: 13px 0;
+  padding-left: 15px;
 }
