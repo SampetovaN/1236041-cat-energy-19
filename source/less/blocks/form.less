@@ -1,5 +1,5 @@
-.form {
-  .form-set();
+.form__wrapper {
+  .wrapper-reset();
 }
 
 .form__title {
@@ -29,22 +29,17 @@
   .reset-fieldset-wrapper();
 }
 
-.form__legend {
-  .text-color-sets(24px; 24px; @legend-color);
-  text-transform: none;
-  padding-left: 20px;
-  padding-top: 29px;
-  display: flex;
-  align-items: center;
+.form__legend-additional {
+  .form__legend ();
 
-  &::after {
-    content: "";
-    width: 99px;
-    height: 4px;
-    background-color: #68b738;
-    flex-shrink: 0;
-    margin-bottom: 14px;
-  }
+}
+
+.form__legend-comments {
+  .form__legend ();
+}
+
+.form__legend-contacts {
+  .form__legend ();
 }
 
 .form__field {

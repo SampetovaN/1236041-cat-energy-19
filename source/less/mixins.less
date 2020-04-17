@@ -157,11 +157,6 @@
   overflow: hidden;
 }
 
-.form-set () {
-  padding: 0;
-  width: 100%;
-}
-
 .reset-fieldset-wrapper() {
   padding: 0 20px;
 
@@ -172,4 +167,9 @@
   @media (min-width: @width-desktop) {
     padding: 0 110px;
   }
+}
+
+.form__legend () {
+  .text-color-sets(24px; 24px; @legend-color);
+  padding-left: 20px;
 }
