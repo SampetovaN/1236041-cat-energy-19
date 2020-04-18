@@ -2,6 +2,11 @@
   .pick-label();
   padding-left: 47px;
   position: relative;
+  padding-bottom: 10px;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 61px;
+  }
 
   input[type="radio"] {
     + .radio__indicator {
@@ -11,8 +16,13 @@
       border: solid 1px #cdcdcd;
       border-radius: 100%;
       background-color: #ffffff;
-      top: 0;
+      top: -3px;
       left: 0;
+
+      @media (min-width: @width-tablet) {
+        width: 39px;
+        height: 38px;
+      }
     }
   }
 
@@ -40,6 +50,13 @@
         left: 8px;
         border-radius: 100%;
         background-color: #68b738;
+
+        @media (min-width: @width-tablet) {
+          width: 18px;
+          height: 18px;
+          top: 11px;
+          left: 11px;
+        }
       }
     }
   }

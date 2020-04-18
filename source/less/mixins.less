@@ -24,6 +24,7 @@
 .fieldset-fresh() {
   border: 0;
   margin: 0;
+  padding: 0;
 }
 
 .placeholder-style() {
@@ -33,6 +34,10 @@
     line-height: 18px;
     color: @placeholder-text-color;
     text-transform: uppercase;
+
+    @media (min-width: @width-tablet) {
+      .text-sets(20px; 20px;);
+    }
   }
 }
 
@@ -43,6 +48,10 @@
 
   &:active {
     color: fade(@label-color, 30%);
+  }
+
+  @media (min-width: @width-tablet) {
+    .text-sets(20px; 20px;);
   }
 }
 
@@ -157,19 +166,15 @@
   overflow: hidden;
 }
 
-.reset-fieldset-wrapper() {
-  padding: 0 20px;
-
-  @media (min-width: @width-tablet) {
-    padding: 0 68px;
-  }
-
-  @media (min-width: @width-desktop) {
-    padding: 0 110px;
-  }
+.reset-fieldset-wrapper(@size:20px) {
+  padding: 0 @size;
 }
 
-.form__legend () {
+.form__legend (@size:9px) {
   .text-color-sets(24px; 24px; @legend-color);
-  padding-left: 20px;
+  padding-left: @size;
+
+  @media (min-width: @width-tablet) {
+    .text-sets(36px; 36px;);
+  }
 }

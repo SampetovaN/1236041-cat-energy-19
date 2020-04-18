@@ -20,9 +20,10 @@
     width: 895px;
     margin: 0;
     padding: 0;
-    margin-right: 80px;
     border-left: none;
     border-right: none;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 
     &:first-child {
       border-top: none;
@@ -76,5 +77,10 @@
     margin-top: 22px;
     padding: 11px 0;
   }
-}
 
+  @media (min-width: @width-desktop) {
+    width: auto;
+    margin: 0;
+    padding: 11px 95px;
+  }
+}
