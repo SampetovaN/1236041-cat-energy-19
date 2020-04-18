@@ -1,3 +1,54 @@
 .checkbox__label {
   .pick-label();
+  padding-left: 47px;
+  position: relative;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 61px;
+  }
+
+  input[type="checkbox"] {
+    + .checkbox__indicator {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: solid 1px #cdcdcd;
+      background-color: #ffffff;
+      top: 0;
+      left: 0;
+
+      @media (min-width: @width-tablet) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  input[type="checkbox"]:focus,
+  input[type="checkbox"]:hover {
+    + .checkbox__indicator {
+      border: solid 1px #bababa;
+    }
+  }
+
+  input[type="checkbox"]:active {
+    + .radio__indicator {
+      opacity: 0.3;
+    }
+  }
+
+  input[type="checkbox"]:checked {
+    + .checkbox__indicator {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/icon-tick.svg");
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 16px;
+        top: 5px;
+        left: 3px;
+      }
+    }
+  }
 }
