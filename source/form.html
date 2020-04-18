@@ -32,45 +32,47 @@
           <form class="form__questions" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="form__profile">
               <legend class="visually-hidden">Параметры кота</legend>
-              <div class="form__field-profile">
-                <div class="form__input-profile field">
-                  <label class="field__label" for="cat-name">Имя:*</label>
-                  <input class="field__input" type="text" name="name" id="cat-name" placeholder="Барсик">
+              <div class="form__profile-container">
+                <div class="form__field-profile">
+                  <div class="form__input-profile field">
+                    <label class="field__label" for="cat-name">Имя:*</label>
+                    <input class="field__input" type="text" name="name" id="cat-name" placeholder="Барсик">
+                  </div>
+                  <div class="form__input-profile field">
+                    <label class="field__label" for="cat-weight">Вес (кг):*</label>
+                    <input class="field__input" type="text" name="weight" id="cat-weight" placeholder="7">
+                  </div>
+                  <div class="form__input-profile field">
+                    <label class="field__label" for="cat-age">Возраст (лет):</label>
+                    <input class="field__input" type="text" name="age" id="cat-age" placeholder="7">
+                  </div>
                 </div>
-                <div class="form__input-profile field">
-                  <label class="field__label" for="cat-weight">Вес (кг):*</label>
-                  <input class="field__input" type="text" name="weight" id="cat-weight" placeholder="7">
-                </div>
-                <div class="form__input-profile field">
-                  <label class="field__label" for="cat-age">Возраст (лет):</label>
-                  <input class="field__input" type="text" name="age" id="cat-age" placeholder="7">
-                </div>
+              <div class="form__program-pick">
+                <ul class="form__radio-list">
+                  <li class="form__radio radio">
+                    <label class="radio__label">
+                      <input class="visually-hidden" type="radio" name="program-group" id="slim">
+                      <span class="radio__indicator"></span>
+                      Похудение
+                    </label>
+                  </li>
+                  <li class="form__radio radio">
+                    <label class="radio__label">
+                      <input class="visually-hidden" type="radio" name="program-group" id="pro">
+                      <span class="radio__indicator"></span>
+                      Набор массы
+                    </label>
+                  </li>
+                  <li class="form__radio radio">
+                    <label class="radio__label" for="none">
+                      <input class="visually-hidden" type="radio" name="program-group" id="none">
+                      <span class="radio__indicator"></span>
+                      Не знаю (Нужен ваш совет)
+                    </label>
+                  </li>
+                </ul>
               </div>
-            <div class="form__program-pick">
-              <ul class="form__radio-list">
-                <li class="form__radio radio">
-                  <label class="radio__label">
-                    <input class="visually-hidden" type="radio" name="program-group" id="slim">
-                    <span class="radio__indicator"></span>
-                    Похудение
-                  </label>
-                </li>
-                <li class="form__radio radio">
-                  <label class="radio__label">
-                    <input class="visually-hidden" type="radio" name="program-group" id="pro">
-                    <span class="radio__indicator"></span>
-                    Набор массы
-                  </label>
-                </li>
-                <li class="form__radio radio">
-                  <label class="radio__label" for="none">
-                    <input class="visually-hidden" type="radio" name="program-group" id="none">
-                    <span class="radio__indicator"></span>
-                    Не знаю (Нужен ваш совет)
-                  </label>
-                </li>
-              </ul>
-            </div>
+              </div>
             </fieldset>
             <fieldset class="form__contacts-form">
               <legend class="form__legend-contacts">Контактные данные (владельца кота)</legend>

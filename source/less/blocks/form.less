@@ -15,6 +15,12 @@
     margin-bottom: 60px;
     padding: 0;
   }
+
+  @media (min-width: @width-tablet) {
+    margin-top: 22px;
+    margin-bottom: 60px;
+    padding: 0;
+  }
 }
 
 .form__desc {
@@ -33,6 +39,11 @@
     margin: 0;
     margin-bottom: 84px;
   }
+
+  @media (min-width: @width-desktop) {
+    padding-left: 0;
+    margin-bottom: 80px;
+  }
 }
 
 .form__questions {
@@ -43,12 +54,14 @@
   @media (min-width: @width-tablet) {
     padding-left: 22px;
   }
+
+  @media (min-width: @width-tablet) {
+    padding-left: 0;
+  }
 }
 
 .form__profile {
   .fieldset-fresh();
-  display: flex;
-  flex-direction: column;
   margin-bottom: 27px;
 
   @media (min-width: @width-tablet) {
@@ -57,8 +70,17 @@
   }
 
   @media (min-width: @width-desktop) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__profile-container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @width-desktop) {
     flex-direction: row;
-    //justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
@@ -67,10 +89,14 @@
   margin-bottom: 15px;
   .last-child-margin();
 
-
   @media (min-width: @width-tablet) {
     margin-bottom: 21px;
     padding: 0 18px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 21px;
+    padding: 0;
   }
 }
 
@@ -85,7 +111,7 @@
   }
 
   @media (min-width: @width-desktop) {
-  width: 570px;
+    width: 570px;
     margin-bottom: 0;
   }
 }
@@ -101,7 +127,7 @@
 }
 
 .form__legend-additional {
-  .form__legend ();
+  .form__legend();
   margin-bottom: 31px;
 
   @media (min-width: @width-tablet) {
@@ -149,6 +175,8 @@
   @media (min-width: @width-desktop) {
     display: flex;
     flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
   }
 }
 
@@ -156,7 +184,6 @@
   .reset-fieldset-wrapper();
   margin-bottom: 15px;
   .last-child-margin();
-
 
   @media (min-width: @width-tablet) {
     margin-bottom: 21px;
@@ -166,6 +193,7 @@
   @media (min-width: @width-desktop) {
     width: 570px;
     margin-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -181,11 +209,11 @@
     margin-left: 20px;
     margin-right: 37px;
   }
+
   @media (min-width: @width-desktop) {
     width: 570px;
     margin: 0;
   }
-
 }
 
 .form__radio-list {
@@ -223,8 +251,13 @@
 .form__textarea-wrapper {
   .reset-fieldset-wrapper(9px);
   padding: 0 20px;
+
   @media (min-width: @width-tablet) {
     padding-right: 26px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0;
   }
 }
 
@@ -239,6 +272,10 @@
     padding-left: 6px;
     padding-right: 96px;
   }
+
+  @media (min-width: @width-desktop) {
+    padding-right: 0;
+  }
 }
 
 .form__checkbox {
@@ -251,6 +288,10 @@
     padding-top: 5px;
     width: 220px;
     margin-bottom: 32px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 0;
   }
 }
 
@@ -270,6 +311,7 @@
 
   @media (min-width: @width-desktop) {
     justify-content: initial;
+    padding-left: 0;
   }
 }
 
@@ -285,6 +327,7 @@
 
   @media (min-width: @width-desktop) {
     margin-right: 80px;
+    flex-grow: 1;
   }
 }
 
@@ -298,5 +341,9 @@
     padding: 0;
     text-align: start;
     .sets-paragraph(16px; 16px);
+  }
+
+  @media (min-width: @width-desktop) {
+    flex-grow: 1;
   }
 }
