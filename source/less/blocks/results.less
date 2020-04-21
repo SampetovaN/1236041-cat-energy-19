@@ -226,35 +226,62 @@
   margin-bottom: 32px;
   position: relative;
 
-  &&--before {
+  &--before,
+  &--after {
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-size: 100%;
+  }
+
+  &--before {
     background-image: url("../img/before-mobile@1x.png");
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-mobile@2x.png");
+
+    }
+  }
+
+  &--after {
+    background-image: url("../img/after-mobile@1x.png");
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/after-mobile@2x.png");
+    }
   }
 
   @media (min-width: @width-tablet) {
     height: 517px;
     margin-bottom: 34px;
 
-    &&--before,
-    &&--after {
+    &--before,
+    &--after {
       background-position: 45px;
       width: 50%;
       background-size: cover;
-      position: absolute;
-      right: 0;
-      left: 0;
       top: 18px;
     }
 
-    &&--before {
+    &--before {
       background-image: url("../img/before-tablet@1x.png");
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/before-tablet@2x.png");
+      }
     }
 
-    &&--after {
+    &--after {
       background-image: url("../img/after-tablet@1x.png");
       background-repeat: no-repeat;
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/after-tablet@2x.png");
+      }
     }
   }
 
@@ -263,8 +290,8 @@
     position: static;
     margin-bottom: 0;
 
-    &&--before,
-    &&--after {
+    &--before,
+    &--after {
       background-position: center;
       position: absolute;
       left: initial;
@@ -276,10 +303,18 @@
 
     &&--before {
       background-image: url("../img/before-desktop@1x.png");
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/before-desktop@2x.png");
+      }
     }
 
-    &&--after {
+    &--after {
       background-image: url("../img/after-desktop@1x.png");
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/after-desktop@2x.png");
+      }
     }
   }
 }
