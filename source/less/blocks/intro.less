@@ -16,12 +16,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-
-  }
-
-  @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: contain;
   }
 
   @media (min-width: @width-tablet) {
@@ -50,10 +44,21 @@
       top: 0;
       left: initial;
       margin-top: -169px;
+    }
+  }
+}
 
-      @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
+@media (max-width: @width-tablet) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet) {
+  .intro {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: contain;
+  }
+}
+
+@media (min-width: @width-desktop) and (min-resolution: @retina-dppx), (min-width: @width-desktop) and (min-resolution: @retina-dpi) {
+  .intro {
+    &::after {
+      background-image: url("../img/index-background-desktop@2x.jpg");
     }
   }
 }
