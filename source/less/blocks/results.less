@@ -1,10 +1,8 @@
-.results__wrapper {
+.results {
   background-color: @results-background-color;
 
   @media (min-width: @width-tablet) {
     background-color: @background-color;
-    width: 100%;
-    padding: 0;
     position: relative;
 
     &::after {
@@ -19,14 +17,18 @@
   }
 
   @media (min-width: @width-desktop) {
-    width: @width-desktop;
-    padding: 0 110px;
-
     &::after {
       background: linear-gradient(90deg, #f2f2f2 72.5%, #eaeaea 72.5%);
       top: 135px;
       left: 0;
     }
+  }
+}
+
+.results__wrapper {
+  @media (min-width: @width-tablet) and  (max-width: @width-desktop - 1px){
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -106,10 +108,9 @@
     align-items: center;
   }
 
-  @media (min-width: @width-tablet) {
+  @media (min-width: @width-desktop) {
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-right: 72px;
   }
 }
 
@@ -235,14 +236,14 @@
     right: 0;
     left: 0;
     top: 0;
-    background-size: 100%;
   }
 
   &--before {
     background-image: url("../img/before-mobile@1x.png");
 
-    @media (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
       background-image: url("../img/before-mobile@2x.png");
+      background-size: 100% auto;
 
     }
   }
@@ -250,8 +251,9 @@
   &--after {
     background-image: url("../img/after-mobile@1x.png");
 
-    @media (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
       background-image: url("../img/after-mobile@2x.png");
+      background-size: 320px auto;
     }
   }
 
@@ -270,8 +272,9 @@
     &--before {
       background-image: url("../img/before-tablet@1x.png");
 
-      @media (min-resolution: @retina-dppx) {
+      @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
         background-image: url("../img/before-tablet@2x.png");
+        background-size: 690px auto;
       }
     }
 
@@ -279,8 +282,9 @@
       background-image: url("../img/after-tablet@1x.png");
       background-repeat: no-repeat;
 
-      @media (min-resolution: @retina-dppx) {
+      @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
         background-image: url("../img/after-tablet@2x.png");
+        background-size: 690px auto;
       }
     }
   }
@@ -304,16 +308,18 @@
     &&--before {
       background-image: url("../img/before-desktop@1x.png");
 
-      @media (min-resolution: @retina-dppx) {
+      @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
         background-image: url("../img/before-desktop@2x.png");
+        background-size: 690px auto;
       }
     }
 
     &--after {
       background-image: url("../img/after-desktop@1x.png");
 
-      @media (min-resolution: @retina-dppx) {
+      @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
         background-image: url("../img/after-desktop@2x.png");
+        background-size: 690px auto;
       }
     }
   }
