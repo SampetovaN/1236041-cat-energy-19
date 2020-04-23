@@ -32,7 +32,7 @@
   }
 
   input[type="checkbox"]:active {
-    + .radio__indicator {
+    + .checkbox__indicator {
       opacity: 0.3;
     }
   }
@@ -46,8 +46,13 @@
         background-repeat: no-repeat;
         width: 21px;
         height: 16px;
-        top: 5px;
-        left: 3px;
+        top: 6px;
+        left: 5px;
+
+        @media (min-width: @width-tablet) {
+          top: 10px;
+          left: 9px;
+        }
       }
     }
   }
