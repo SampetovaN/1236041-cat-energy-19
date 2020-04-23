@@ -1,4 +1,5 @@
 .contacts {
+  margin: 0 auto;
   @media (min-width: @width-desktop) {
     position: relative;
   }
@@ -8,6 +9,7 @@
   padding: 28px 20px 27px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: @contacts-background-color;
 
   &--index {
@@ -80,35 +82,42 @@
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: bottom;
-  width: 100%;
+  min-width: 100%;
   height: 362px;
   position: relative;
-  background-size: 100%;
-
-  @media(min-resolution: @retina-dppx) {
-    background-image: url("../img/bg-map-mobile@2x.png");
-  }
 
   @media (min-width: @width-tablet) {
     background-image: url("../img/bg-map-tablet@1x.png");
     background-repeat: no-repeat;
     width: 100%;
     height: 397px;
-
-    @media(min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-map-tablet@2x.png");
-    }
   }
 
   @media (min-width: @width-desktop) {
     background-image: url("../img/bg-map-desktop@1x.png");
-    background-repeat: no-repeat;
-    width: 100%;
     height: 400px;
+  }
+}
 
-    @media(min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-map-desktop@2x.png");
-    }
+
+@media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
+  .contacts__map-wrapper {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: cover;
+  }
+}
+
+@media (min-width: @width-tablet) and (min-resolution: @retina-dppx), (min-width: @width-tablet) and (min-resolution: @retina-dpi) {
+  .contacts__map-wrapper {
+    background-image: url("../img/bg-map-tablet@2x.png");
+    background-size: cover;
+  }
+}
+
+@media (min-width: @width-desktop) and (min-resolution: @retina-dppx), (min-width: @width-desktop) and (min-resolution: @retina-dpi) {
+  .contacts__map-wrapper {
+    background-image: url("../img/bg-map-desktop@2x.png");
+    background-size: cover;
   }
 }
 

@@ -1,10 +1,8 @@
-.results__wrapper {
+.results {
   background-color: @results-background-color;
 
   @media (min-width: @width-tablet) {
     background-color: @background-color;
-    width: 100%;
-    padding: 0;
     position: relative;
 
     &::after {
@@ -19,14 +17,18 @@
   }
 
   @media (min-width: @width-desktop) {
-    width: @width-desktop;
-    padding: 0 110px;
-
     &::after {
       background: linear-gradient(90deg, #f2f2f2 72.5%, #eaeaea 72.5%);
       top: 135px;
       left: 0;
     }
+  }
+}
+
+.results__wrapper {
+  @media (min-width: @width-tablet) and  (max-width: @width-desktop) {
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -106,10 +108,9 @@
     align-items: center;
   }
 
-  @media (min-width: @width-tablet) {
+  @media (min-width: @width-desktop) {
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-right: 72px;
   }
 }
 
@@ -226,96 +227,109 @@
   margin-bottom: 32px;
   position: relative;
 
-  &--before,
-  &--after {
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    background-size: 100%;
-  }
-
-  &--before {
-    background-image: url("../img/before-mobile@1x.png");
-
-    @media (min-resolution: @retina-dppx) {
-      background-image: url("../img/before-mobile@2x.png");
-
-    }
-  }
-
-  &--after {
-    background-image: url("../img/after-mobile@1x.png");
-
-    @media (min-resolution: @retina-dppx) {
-      background-image: url("../img/after-mobile@2x.png");
-    }
-  }
-
   @media (min-width: @width-tablet) {
     height: 517px;
     margin-bottom: 34px;
-
-    &--before,
-    &--after {
-      background-position: 45px;
-      width: 50%;
-      background-size: cover;
-      top: 18px;
-    }
-
-    &--before {
-      background-image: url("../img/before-tablet@1x.png");
-
-      @media (min-resolution: @retina-dppx) {
-        background-image: url("../img/before-tablet@2x.png");
-      }
-    }
-
-    &--after {
-      background-image: url("../img/after-tablet@1x.png");
-      background-repeat: no-repeat;
-
-      @media (min-resolution: @retina-dppx) {
-        background-image: url("../img/after-tablet@2x.png");
-      }
-    }
   }
 
   @media (min-width: @width-desktop) {
     height: auto;
     position: static;
     margin-bottom: 0;
+  }
+}
 
-    &--before,
-    &--after {
-      background-position: center;
-      position: absolute;
-      left: initial;
-      right: 50px;
-      top: -59px;
-      height: 90%;
-      width: 50%;
-    }
+.results__image-before,
+.results__image-after {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
 
-    &&--before {
-      background-image: url("../img/before-desktop@1x.png");
+  @media (min-width: @width-tablet) {
+    background-position: 45px;
+    width: 50%;
+    background-size: cover;
+    top: 18px;
+  }
 
-      @media (min-resolution: @retina-dppx) {
-        background-image: url("../img/before-desktop@2x.png");
-      }
-    }
+  @media (min-width: @width-desktop) {
+    background-position: center;
+    position: absolute;
+    left: initial;
+    right: 50px;
+    top: -59px;
+    height: 90%;
+    width: 50%;
+  }
+}
 
-    &--after {
-      background-image: url("../img/after-desktop@1x.png");
+.results__image-before {
+  background-image: url("../img/before-mobile@1x.png");
 
-      @media (min-resolution: @retina-dppx) {
-        background-image: url("../img/after-desktop@2x.png");
-      }
-    }
+  @media (min-width: @width-tablet) {
+    background-image: url("../img/before-tablet@1x.png");
+  }
+
+  @media (min-width: @width-desktop) {
+    background-image: url("../img/before-desktop@1x.png");
+  }
+}
+
+.results__image-after {
+  background-image: url("../img/after-mobile@1x.png");
+
+  @media (min-width: @width-tablet) {
+    background-image: url("../img/after-tablet@1x.png");
+  }
+
+  @media (min-width: @width-desktop) {
+    background-image: url("../img/after-desktop@1x.png");
+  }
+}
+
+@media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
+  .results__image-before {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: 320px auto;
+  }
+}
+
+@media (min-width: @width-tablet) and (min-resolution: @retina-dppx), (min-width: @width-tablet) and (min-resolution: @retina-dpi) {
+  .results__image-before {
+    background-image: url("../img/before-tablet@2x.png");
+    background-size: 690px auto;
+  }
+}
+
+@media (min-width: @width-desktop) and (min-resolution: @retina-dppx), (min-width: @width-desktop) and (min-resolution: @retina-dpi) {
+  .results__image-before {
+    background-image: url("../img/before-desktop@2x.png");
+    background-size: 690px auto;
+  }
+}
+
+@media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
+  .results__image-after {
+    background-image: url("../img/after-mobile@2x.png");
+    background-size: 320px auto;
+  }
+}
+
+@media (min-width: @width-tablet) and (min-resolution: @retina-dppx), (min-width: @width-tablet) and (min-resolution: @retina-dpi) {
+  .results__image-after {
+    background-image: url("../img/after-tablet@2x.png");
+    background-size: 690px auto;
+  }
+}
+
+@media (min-width: @width-desktop) and (min-resolution: @retina-dppx), (min-width: @width-desktop) and (min-resolution: @retina-dpi) {
+  .results__image-after {
+    background-image: url("../img/after-desktop@2x.png");
+    background-size: 690px auto;
   }
 }
 
