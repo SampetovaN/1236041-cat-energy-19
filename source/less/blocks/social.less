@@ -13,20 +13,6 @@
 .social__item {
   margin-right: 38px;
 
-  &:hover,
-  &:focus {
-    svg {
-      fill: @social-color-hover;
-    }
-  }
-
-  &:active {
-    svg {
-      fill: @social-color-hover;
-      opacity: 0.3;
-    }
-  }
-
   &:last-child {
     margin-right: 0;
   }
@@ -34,5 +20,19 @@
   @media (min-width: @width-tablet) {
     transform: scale(1.5);
     margin-right: 33px;
+  }
+}
+
+.social__icon {
+  fill: #231f20;
+
+  &:hover,
+  &:focus {
+    fill: @social-color-hover;
+  }
+
+  &:active {
+    fill: @social-color-hover;
+    opacity: 0.3;
   }
 }

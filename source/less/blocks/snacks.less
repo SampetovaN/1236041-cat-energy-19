@@ -50,23 +50,17 @@
   width: 280px;
   height: 289px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
 
   @media (min-width: @width-tablet) {
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     width: 708px;
     height: 200px;
-    flex-direction: row;
   }
 
   @media (min-width: @width-desktop) {
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     width: 245px;
     height: 289px;
-    flex-direction: column;
   }
 }
 
@@ -91,40 +85,54 @@
   }
 }
 
-
-.snacks__icon-wrapper {
-  padding-top: 65px;
-
-  svg {
-    fill: white;
-  }
-
-  @media (min-width: @width-tablet) {
-    padding: 0;
-    padding-left: 90px;
-  }
-
-  @media (min-width: @width-desktop) {
-    padding: 0;
-    padding-top: 65px;
-  }
-}
-
 .snacks__promo-desc {
   .text-color-sets(16px;20px;@promo-desc-text-color);
   font-family: "Arial", sans-serif;
   text-align: center;
-  padding-bottom: 25px;
+  margin: 0 auto;
+  padding-top: 190px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 61px;
+    top: 23%;
+    left: 50%;
+    margin-left: -27px;
+  }
 
   @media (min-width: @width-tablet) {
     padding: 0;
     padding-right: 125px;
+    display: block;
+    margin: auto 0;
+    padding-left: 422px;
     text-align: start;
+
+    &::after {
+      width: 56px;
+      height: 61px;
+      top: -6px;
+      left: 88px;
+      margin: 0;
+    }
   }
 
   @media (min-width: @width-desktop) {
     padding: 0;
     text-align: center;
     padding-bottom: 25px;
+    margin: 0 auto;
+    padding-top: 190px;
+
+    &::after {
+      top: 23%;
+      left: 50%;
+      margin-left: -27px;
+    }
   }
 }
