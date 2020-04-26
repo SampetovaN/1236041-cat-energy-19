@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
+  width: auto;
   min-height: 481px;
   margin: 0 auto;
 
@@ -48,10 +48,10 @@
   }
 }
 
-@media (max-width: @width-tablet) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet) {
+@media (max-width: @width-tablet - 1px) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet - 1px) {
   .intro {
     background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: contain;
+    background-size: 100%;
   }
 }
 
