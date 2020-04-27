@@ -49,13 +49,17 @@
   background-repeat: no-repeat;
   width: 280px;
   height: 289px;
-  display: flex;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
   @media (min-width: @width-tablet) {
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     width: 708px;
     height: 200px;
+
   }
 
   @media (min-width: @width-desktop) {
@@ -90,7 +94,6 @@
   .text-color-sets(16px;20px;@promo-desc-text-color);
   font-family: "Arial", sans-serif;
   text-align: center;
-  margin: 0 auto;
   padding-top: 190px;
   position: relative;
 
@@ -106,11 +109,9 @@
     margin-left: -27px;
   }
 
-  @media (min-width: @width-tablet) {
+  @media (min-width: @width-tablet) and (max-width: @width-desktop - 1px) {
     padding: 0;
     padding-right: 125px;
-    display: block;
-    margin: auto 0;
     padding-left: 422px;
     text-align: start;
 
@@ -120,20 +121,6 @@
       top: -6px;
       left: 88px;
       margin: 0;
-    }
-  }
-
-  @media (min-width: @width-desktop) {
-    padding: 0;
-    text-align: center;
-    padding-bottom: 25px;
-    margin: 0 auto;
-    padding-top: 190px;
-
-    &::after {
-      top: 23%;
-      left: 50%;
-      margin-left: -27px;
     }
   }
 }

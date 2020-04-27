@@ -3,9 +3,7 @@
   background-repeat: no-repeat;
   position: relative;
   box-sizing: border-box;
-  width: auto;
   min-height: 481px;
-  margin: 0 auto;
 
   &::after {
     content: "";
@@ -60,6 +58,18 @@
     &::after {
       background-image: url("../img/index-background-desktop@2x.jpg");
     }
+  }
+}
+
+.intro__wrapper {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @width-tablet) {
+    width: @width-tablet;
+  }
+  @media (min-width: @width-desktop) {
+    width: @width-desktop;
   }
 }
 
