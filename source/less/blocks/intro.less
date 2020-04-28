@@ -3,9 +3,7 @@
   background-repeat: no-repeat;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
   min-height: 481px;
-  margin: 0 auto;
 
   &::after {
     content: "";
@@ -48,10 +46,10 @@
   }
 }
 
-@media (max-width: @width-tablet) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet) {
+@media (max-width: @width-tablet - 1px) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet - 1px) {
   .intro {
     background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: contain;
+    background-size: 100%;
   }
 }
 
@@ -60,6 +58,19 @@
     &::after {
       background-image: url("../img/index-background-desktop@2x.jpg");
     }
+  }
+}
+
+.intro__wrapper {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @width-tablet) {
+    width: @width-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @width-desktop;
   }
 }
 

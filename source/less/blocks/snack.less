@@ -27,17 +27,17 @@
     border-left: none;
     border-right: none;
     flex-wrap: nowrap;
-    justify-content: space-between;
   }
 }
 
 .snack__title {
+  .set-product-title(16px;16px;@product-title-color);
+
   @media (min-width: @width-tablet) {
     a {
       .text-sets(20px;20px;);
     }
   }
-  .set-product-title(16px;16px;@product-title-color);
 }
 
 .snack__price,
@@ -54,12 +54,23 @@
 
   @media (min-width: @width-tablet) {
     .text-sets(16px;20px;);
+    width: 285px;
+    margin-left: auto;
+    margin-right: 39px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-top: 7px;
   }
 }
 
 .snack__price {
   @media (min-width: @width-tablet) {
     margin-left: 50px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-left: 0;
   }
 }
 
@@ -78,7 +89,8 @@
 
   @media (min-width: @width-desktop) {
     width: auto;
-    margin: 0;
-    padding: 11px 95px;
+    margin: 13px 0;
+    margin-bottom: 15px;
+    padding: 11px 92px;
   }
 }
