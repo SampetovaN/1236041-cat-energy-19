@@ -14,7 +14,8 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "^10.1.0",
     "stylelint-config-htmlacademy": "0.1.x",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "eclint": "^2.8.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -39,8 +40,5 @@
   ],
   "engines": {
     "node": "8.16"
-  },
-  "dependencies": {
-    "eclint": "^2.8.1"
   }
 }

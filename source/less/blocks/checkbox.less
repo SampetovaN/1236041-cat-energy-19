@@ -7,11 +7,15 @@
     padding-left: 61px;
   }
 
+  @media (min-width: @width-tablet) {
+    padding-left: 59px;
+  }
+
   input[type="checkbox"] {
     + .checkbox__indicator {
       position: absolute;
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border: solid 1px #cdcdcd;
       background-color: #ffffff;
       top: 0;
@@ -19,7 +23,9 @@
 
       @media (min-width: @width-tablet) {
         width: 40px;
-        height: 40px;
+        height: 38px;
+        top: -4px;
+        left: 1px;
       }
     }
   }

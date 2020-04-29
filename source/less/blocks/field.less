@@ -37,16 +37,29 @@
   }
 
   @media (min-width: @width-tablet) {
-    padding: 16px 0;
-    padding-left: 19px;
+    padding: 16px 20px;
+    margin-left: 16px;
+  }
+}
+
+input[name="phone"],
+input[name="email"] {
+  margin-left: 10px;
+
+  @media (min-width: @width-tablet) {
+    margin-left: 16px;
   }
 }
 
 .field__icon-wrapper {
   position: absolute;
-  right: 33px;
+  right: 14px;
+
+  @media (min-width: @width-tablet) {
+    right: 16px;
+  }
 
   @media (min-width: @width-desktop) {
-    right: 16px;
+    right: 19px;
   }
 }
