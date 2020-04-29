@@ -1,7 +1,11 @@
 .snack {
-  .set-border(#eeeeee);
+  border-top: 1px solid #eeeeee;
   padding-top: 10px;
   padding-bottom: 18px;
+
+  &:last-child {
+    border-bottom: 1px solid #eeeeee;
+  }
 
   @media (min-width: @width-tablet) {
     display: flex;
@@ -9,14 +13,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 26px 37px 26px;
+    padding: 26px 37px 27px;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
-    border-top: 1px solid #eeeeee;
-
-    &:last-child {
-      border-bottom: 1px solid #eeeeee;
-    }
   }
 
   @media (min-width: @width-desktop) {
@@ -54,13 +53,15 @@
 
   @media (min-width: @width-tablet) {
     .text-sets(16px;20px;);
-    width: 285px;
+
     margin-left: auto;
-    margin-right: 39px;
+
   }
 
   @media (min-width: @width-desktop) {
+    width: 285px;
     margin-top: 7px;
+    margin-right: 39px;
   }
 }
 
@@ -89,8 +90,7 @@
 
   @media (min-width: @width-desktop) {
     width: auto;
-    margin: 13px 0;
-    margin-bottom: 15px;
+    margin: 13px 0 16px;
     padding: 11px 92px;
   }
 }
