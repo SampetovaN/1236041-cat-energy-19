@@ -3,14 +3,36 @@
   flex-direction: row;
   align-items: baseline;
   width: 100%;
+  box-sizing: border-box;
 
   &::after {
     content: "";
-    width: 66%;
+    width: 35%;
+    flex-grow: 1;
+    flex-shrink: 0;
     background-color: #68b738;
     height: 3px;
     position: relative;
     left: 19px;
-    top: -4px;
+    top: -5px;
+  }
+
+  @media (min-width: @width-tablet) {
+    margin-left: -60px;
+
+    &::before {
+      content: "";
+      width: 60px;
+      flex-shrink: 0;
+      background-color: #68b738;
+      height: 3px;
+      position: relative;
+      top: -5px;
+    }
+
+    &::after {
+      left: 0;
+      width: auto;
+    }
   }
 }
