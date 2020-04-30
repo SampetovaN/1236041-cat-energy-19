@@ -36,7 +36,7 @@
             </picture>
           </a>
           <button class="main-nav__toggle main-nav__toggle--closed" type="button" aria-label="Кнопка открытия меню"></button>
-          <ul class="main-nav__nav-list site-list">
+          <ul class="visually-hidden main-nav__nav-list site-list">
             <li class="site-list__item site-list__item--index"><a href="">Главная</a></li>
             <li class="site-list__item site-list__item--index"><a href="catalog.html">Каталог продукции</a></li>
             <li class="site-list__item site-list__item--index"><a href="form.html">Подбор программы</a></li>
@@ -50,7 +50,7 @@
           <div class="intro__text">
             <h1 class="intro__title">Функциональное питание для котов</h1>
             <p class="intro__desc">Занялся собой? Займись котом!</p>
-            <button class="button button--green intro__button" type="button">Подобрать программу</button>
+            <a class="button button--green intro__button" href="form.html">Подобрать программу</a>
           </div>
           <div class="intro__image-wrapper">
             <picture>
@@ -89,7 +89,7 @@
         </div>
       </section>
       <section class="advantages">
-        <div class="wrapper advantages__wrapper">
+        <div class="wrapper">
           <h2 class="advantages__title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--healthy">
@@ -108,7 +108,7 @@
         </div>
       </section>
       <section class="results">
-          <div class="wrapper results__wrapper">
+        <div class="results__wrapper">
             <h2 class="results__title">Живой пример</h2>
             <div class="results__content">
               <div class="results__info">
@@ -122,27 +122,41 @@
                       <b class="results__amount">60 дней</b>
                       <p class="results__text">затрачено времени</p>
                     </div>
-                    <span class="results__money">Затраты на питание: <span class="results__money-amount">15 000 руб.</span></p>
+                    <p class="results__money">Затраты на питание: <span class="results__money-amount">15 000 руб.</span></p>
                   </div>
               </div>
               <div class="results__appearance">
-                <div class="results__image">
-                  <div class="results__image-before"></div>
-                  <div class="results__image-after"></div>
-                </div>
-                <div class="results__slider slider">
-                  <button class="slider__button" aria-label="Переход к фотографии кота до приема Кэт Энерджи">Было</button>
-                  <div class="slider__line">
-                    <div class="slider__pointer"></div>
+                  <div class="results__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"  srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)"  srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                      <img class="results__image results__image--before" src="img/before-mobile@1x.png"  srcset="img/before-mobile@1x.png 1x, img/before-mobile@2x.png 2x" width="320" height="240" alt="Фото кота до приема Кэт Энерджи">
+                    </picture>
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"  srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)"  srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                      <img class="results__image results__image--after" src="img/after-mobile@1x.png"  srcset="img/after-mobile@1x.png 1x, img/after-mobile@2x.png 2x" width="320" height="240" alt="Фото кота после приема Кэт Энерджи">
+                    </picture>
                   </div>
-                  <button class="slider__button" aria-label="Переход к фотографии кота после приема Кэт Энерджи">Стало</button>
+                <div class="results__slider">
+                  <button class="results__slider-button" aria-label="Переход к фотографии кота до приема Кэт Энерджи">Было</button>
+                  <div class="results__slider-line">
+                    <div class="results__slider-pointer"></div>
+                  </div>
+                  <button class="results__slider-button" aria-label="Переход к фотографии кота после приема Кэт Энерджи">Стало</button>
                 </div>
               </div>
             </div>
-          </div>
+        </div>
       </section>
-      <section class="contacts">
-          <div class="contacts__text contacts__text--index">
+      <section class="contacts contacts--index">
+          <div class="contacts__text">
             <p class="contacts__slogan">Приглашаем <br> к сотрудничеству дилеров!</p>
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
         </div>
