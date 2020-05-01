@@ -36,7 +36,7 @@
             </picture>
           </a>
           <button class="main-nav__toggle main-nav__toggle--closed" type="button" aria-label="Кнопка открытия меню"></button>
-          <ul class="visually-hidden main-nav__nav-list site-list">
+          <ul class="main-nav__nav-list site-list">
             <li class="site-list__item site-list__item--index"><a href="">Главная</a></li>
             <li class="site-list__item site-list__item--index"><a href="catalog.html">Каталог продукции</a></li>
             <li class="site-list__item site-list__item--index"><a href="form.html">Подбор программы</a></li>
@@ -146,8 +146,8 @@
                   </div>
                 <div class="results__slider">
                   <button class="results__slider-button" aria-label="Переход к фотографии кота до приема Кэт Энерджи">Было</button>
-                  <div class="results__slider-line">
-                    <div class="results__slider-pointer"></div>
+                  <div class="results__slider-line" tabindex="0">
+                    <div class="results__slider-pointer" tabindex="0"></div>
                   </div>
                   <button class="results__slider-button" aria-label="Переход к фотографии кота после приема Кэт Энерджи">Стало</button>
                 </div>
@@ -205,5 +205,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcozkOAsFmll8Vh5Qjq3I-qn18bbeq3Zk"></script>
   </body>
 </html>

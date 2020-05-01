@@ -61,11 +61,11 @@
                 <legend class="visually-hidden">Параметры кота</legend>
                   <div class="form__input-profile field">
                     <label class="field__label" for="cat-name">Имя:*</label>
-                    <input class="field__input" type="text" name="name" id="cat-name" placeholder="Барсик">
+                    <input class="field__input" type="text" name="name" id="cat-name" placeholder="Барсик" required>
                   </div>
                   <div class="form__input-profile field">
                     <label class="field__label" for="cat-weight">Вес (кг):*</label>
-                    <input class="field__input" type="text" name="weight" id="cat-weight" placeholder="7">
+                    <input class="field__input" type="text" name="weight" id="cat-weight" placeholder="7" required>
                   </div>
                   <div class="form__input-profile field">
                     <label class="field__label" for="cat-age">Возраст (лет):</label>
@@ -104,7 +104,7 @@
               <div class="form__field-contacts">
                 <div class="form__input-contact field">
                   <label class="field__label" for="cat-email">E-mail:*</label>
-                  <input class="field__input" type="email" name="email" id="cat-email" placeholder="kuklachev@gmail.com">
+                  <input class="field__input" type="email" name="email" id="cat-email" placeholder="kuklachev@gmail.com" required>
                   <span class="field__icon-wrapper">
                     <svg class="field__icon" width="18" height="14">
                       <use xlink:href="#icon-mail"></use>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="form__input-contact field">
                   <label class="field__label" for="cat-phone">Телефон:*</label>
-                  <input class="field__input" type="tel" name="phone" id="cat-phone" placeholder="8 (960) 900-60-90">
+                  <input class="field__input" type="tel" name="phone" id="cat-phone" placeholder="8 (960) 900-60-90" required>
                   <span class="field__icon-wrapper">
                     <svg class="field__icon" width="20" height="20">
                       <use xlink:href="#icon-phone"></use>
@@ -218,5 +218,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcozkOAsFmll8Vh5Qjq3I-qn18bbeq3Zk"></script>
   </body>
 </html>

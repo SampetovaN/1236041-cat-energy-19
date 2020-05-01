@@ -1,16 +1,23 @@
+.snacks {
+  overflow: hidden;
+}
+
 .snacks__title {
-  .text-color-sets(24px;24px;@snack-title-color);
+  .text-color-sets(24px; 24px; @snack-title-color);
+  margin-top: 0;
   margin-bottom: 35px;
+  padding-right: 21px;
+  display: inline-flex;
 
   @media (min-width: @width-tablet) {
-    .text-sets(36px;36px;);
+    .text-sets(36px; 36px;);
     margin-bottom: 78px;
-    margin-left: -23px;
   }
 
   @media (min-width: @width-desktop) {
     margin-bottom: 82px;
-    margin-left: -60px;
+    margin-right: -28px;
+    margin-left: -36px;
   }
 }
 
@@ -93,7 +100,7 @@
 }
 
 .snacks__promo-desc {
-  .text-color-sets(16px;20px;@promo-desc-text-color);
+  .text-color-sets(16px; 20px; @promo-desc-text-color);
   font-family: "Arial", sans-serif;
   text-align: center;
   padding-top: 149px;

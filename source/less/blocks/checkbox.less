@@ -30,10 +30,15 @@
     }
   }
 
-  input[type="checkbox"]:focus,
   input[type="checkbox"]:hover {
     + .checkbox__indicator {
       border: solid 1px #bababa;
+    }
+  }
+
+  input[type="checkbox"]:focus {
+    + .checkbox__indicator {
+      border: 2px solid #669ec0;
     }
   }
 
