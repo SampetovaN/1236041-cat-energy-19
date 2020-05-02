@@ -31,7 +31,7 @@
     width: 570px;
     z-index: 5;
     top: 95px;
-    left: 110px;
+    left: 39px;
     background-color: @background-color;
   }
 }
@@ -53,22 +53,21 @@
   margin: 0;
   width: 140px;
 
-  br {
-    display: none;
-  }
-
   @media (min-width: @width-tablet) {
     .text-sets(16px; 20px;);
     text-align: right;
     width: 175px;
-
-    br {
-      display: block;
-    }
   }
 
   @media (min-width: @width-desktop) {
-    text-align: start;
+    text-align: left;
+  }
+}
+
+.contacts__address-city {
+  @media (min-width: @width-tablet) {
+    display: inline-flex;
+    margin-top: 17px;
   }
 }
 

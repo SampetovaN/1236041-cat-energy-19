@@ -5,23 +5,17 @@
   align-items: center;
 
   &--nojs {
-    .main-nav__toggle {
-      display: none;
-      margin: 0;
-      width: 0;
-      height: 0;
-    }
+    @media (max-width: @width-tablet - 1) {
+      .main-nav__toggle {
+        display: none;
+        margin: 0;
+        width: 0;
+        height: 0;
+      }
 
-    .main-nav__logo {
-      display: block;
-      margin: 0 auto;
-      margin-top: 15px;
-      margin-bottom: 8px;
-      padding: 0;
-    }
-
-    .main-nav__nav-list {
-      display: block;
+      .main-nav__nav-list {
+        display: block;
+      }
     }
   }
 }

@@ -25,13 +25,13 @@
   padding-left: 15px;
 
   &:active {
-    + .field__icon-wrapper {
+    + .field__icon {
       fill: #68b738;
     }
   }
 
-  &--error  {
-    + .field__icon-wrapper {
+  &:focus:required:invalid {
+    + .field__icon {
       fill: @input-color-error;
     }
   }
@@ -51,15 +51,18 @@ input[name="email"] {
   }
 }
 
-.field__icon-wrapper {
+.field__icon {
   position: absolute;
+  top: 13px;
   right: 14px;
 
   @media (min-width: @width-tablet) {
+    top: 16px;
     right: 16px;
   }
 
   @media (min-width: @width-desktop) {
     right: 19px;
+    top: 18px;
   }
 }

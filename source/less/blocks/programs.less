@@ -159,10 +159,7 @@
   margin-top: 21px;
   padding-bottom: 23px;
   border-bottom: 1px solid @paragraph-border-color;
-
-  br {
-    display: none;
-  }
+  .br-reset ();
 
 
   @media (min-width: @width-tablet) {
@@ -172,10 +169,6 @@
     margin-top: 25px;
     margin-bottom: 59px;
     .sets-paragraph(16px; 24px);
-
-    br {
-      display: block;
-    }
   }
 
   @media (min-width: @width-desktop) {
