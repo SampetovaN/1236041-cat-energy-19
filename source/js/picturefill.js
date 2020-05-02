@@ -110,8 +110,8 @@
     var regSize = /(\([^)]+\))?\s*(.+)/;
     var setOptions = window.picturefillCFG;
     /**
-     * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
-     */
+    * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
+    */
         // baseStyle also used by getEmValue (i.e.: width: 1em is important)
     var baseStyle = "position:absolute;left:0;visibility:hidden;display:block;padding:0;border:none;font-size:1em;width:1em;overflow:hidden;clip:rect(0px, 0px, 0px, 0px)";
     var fsCss = "font-size:100%!important;";
@@ -126,9 +126,9 @@
     };
     var anchor = document.createElement( "a" );
     /**
-     * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
-     * @type {boolean}
-     */
+    * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
+    * @type {boolean}
+    */
     var alreadyRun = false;
 
     // Reusable, non-"g" Regexes
@@ -156,8 +156,8 @@
     };
 
     /**
-     * simple memoize function:
-     */
+    * simple memoize function:
+    */
 
     var memoize = function(fn) {
         var cache = {};
@@ -182,12 +182,12 @@
     }
 
     /**
-     * gets a mediaquery and returns a boolean or gets a css length and returns a number
-     * @param css mediaqueries or css length
-     * @returns {boolean|number}
-     *
-     * based on: https://gist.github.com/jonathantneal/db4f77009b155f083738
-     */
+    * gets a mediaquery and returns a boolean or gets a css length and returns a number
+    * @param css mediaqueries or css length
+    * @returns {boolean|number}
+    *
+    * based on: https://gist.github.com/jonathantneal/db4f77009b155f083738
+    */
     var evalCSS = (function() {
 
         var regLength = /^([\d\.]+)(em|vw|px)$/;
@@ -253,9 +253,9 @@
     };
 
     /**
-     *
-     * @param opt
-     */
+    *
+    * @param opt
+    */
     var picturefill = function( opt ) {
 
         if (!isSupportTestReady) {return;}
@@ -290,10 +290,10 @@
     };
 
     /**
-     * outputs a warning for the developer
-     * @param {message}
-     * @type {Function}
-     */
+    * outputs a warning for the developer
+    * @param {message}
+    * @type {Function}
+    */
     warn = ( window.console && console.warn ) ?
         function( message ) {
             console.warn( message );
@@ -330,8 +330,8 @@
     types[ "image/svg+xml" ] = document.implementation.hasFeature( "http://www.w3.org/TR/SVG11/feature#Image", "1.1" );
 
     /**
-     * updates the internal vW property with the current viewport width in px
-     */
+    * updates the internal vW property with the current viewport width in px
+    */
     function updateMetrics() {
 
         isVwDirty = false;
@@ -461,14 +461,14 @@
     }
 
     /**
-     * Srcset Parser
-     * By Alex Bell |  MIT License
-     *
-     * @returns Array [{url: _, d: _, w: _, h:_, set:_(????)}, ...]
-     *
-     * Based super duper closely on the reference algorithm at:
-     * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
-     */
+    * Srcset Parser
+    * By Alex Bell |  MIT License
+    *
+    * @returns Array [{url: _, d: _, w: _, h:_, set:_(????)}, ...]
+    *
+    * Based super duper closely on the reference algorithm at:
+    * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
+    */
 
     // 1. Let input be the value passed to this algorithm.
     // (TO-DO : Explain what "set" argument is here. Maybe choose a more
@@ -502,9 +502,9 @@
             candidates = [];
 
         /**
-         * Adds descriptor properties to a candidate, pushes to the candidates array
-         * @return undefined
-         */
+        * Adds descriptor properties to a candidate, pushes to the candidates array
+        * @return undefined
+        */
         // (Declared outside of the while loop so that it's only created once.
         // (This fn is defined before it is used, in order to pass JSHINT.
         // Unfortunately this breaks the sequencing of the spec comments. :/ )
@@ -589,11 +589,11 @@
         } // (close parseDescriptors fn)
 
         /**
-         * Tokenizes descriptor properties prior to parsing
-         * Returns undefined.
-         * (Again, this fn is defined before it is used, in order to pass JSHINT.
-         * Unfortunately this breaks the logical sequencing of the spec comments. :/ )
-         */
+        * Tokenizes descriptor properties prior to parsing
+        * Returns undefined.
+        * (Again, this fn is defined before it is used, in order to pass JSHINT.
+        * Unfortunately this breaks the logical sequencing of the spec comments. :/ )
+        */
         function tokenize() {
 
             // 8.1. Descriptor tokeniser: Skip whitespace
@@ -751,31 +751,31 @@
     }
 
     /*
-     * Sizes Parser
-     *
-     * By Alex Bell |  MIT License
-     *
-     * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
-     *
-     * Reference algorithm at:
-     * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
-     *
-     * Most comments are copied in directly from the spec
-     * (except for comments in parens).
-     *
-     * Grammar is:
-     * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
-     * <source-size> = <media-condition> <source-size-value>
-     * <source-size-value> = <length>
-     * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
-     *
-     * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
-     * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
-     *
-     * Returns the first valid <css-length> with a media condition that evaluates to true,
-     * or "100vw" if all valid media conditions evaluate to false.
-     *
-     */
+    * Sizes Parser
+    *
+    * By Alex Bell |  MIT License
+    *
+    * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
+    *
+    * Reference algorithm at:
+    * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
+    *
+    * Most comments are copied in directly from the spec
+    * (except for comments in parens).
+    *
+    * Grammar is:
+    * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
+    * <source-size> = <media-condition> <source-size-value>
+    * <source-size-value> = <length>
+    * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
+    *
+    * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
+    * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
+    *
+    * Returns the first valid <css-length> with a media condition that evaluates to true,
+    * or "100vw" if all valid media conditions evaluate to false.
+    *
+    */
 
     function parseSizes(strValue) {
 
@@ -1016,8 +1016,8 @@
     pf.cfg = cfg;
 
     /**
-     * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
-     */
+    * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
+    */
     pf.DPR = (DPR  || 1 );
     pf.u = units;
 
@@ -1027,10 +1027,10 @@
     pf.setSize = noop;
 
     /**
-     * Gets a string and returns the absolute URL
-     * @param src
-     * @returns {String} absolute URL
-     */
+    * Gets a string and returns the absolute URL
+    * @param src
+    * @returns {String} absolute URL
+    */
 
     pf.makeUrl = memoize(function(src) {
         anchor.href = src;
@@ -1038,21 +1038,21 @@
     });
 
     /**
-     * Gets a DOM element or document and a selctor and returns the found matches
-     * Can be extended with jQuery/Sizzle for IE7 support
-     * @param context
-     * @param sel
-     * @returns {NodeList|Array}
-     */
+    * Gets a DOM element or document and a selctor and returns the found matches
+    * Can be extended with jQuery/Sizzle for IE7 support
+    * @param context
+    * @param sel
+    * @returns {NodeList|Array}
+    */
     pf.qsa = function(context, sel) {
         return ( "querySelector" in context ) ? context.querySelectorAll(sel) : [];
     };
 
     /**
-     * Shortcut method for matchMedia ( for easy overriding in tests )
-     * wether native or pf.mMQ is used will be decided lazy on first call
-     * @returns {boolean}
-     */
+    * Shortcut method for matchMedia ( for easy overriding in tests )
+    * wether native or pf.mMQ is used will be decided lazy on first call
+    * @returns {boolean}
+    */
     pf.matchesMedia = function() {
         if ( window.matchMedia && (matchMedia( "(min-width: 0.1em)" ) || {}).matches ) {
             pf.matchesMedia = function( media ) {
@@ -1066,24 +1066,24 @@
     };
 
     /**
-     * A simplified matchMedia implementation for IE8 and IE9
-     * handles only min-width/max-width with px or em values
-     * @param media
-     * @returns {boolean}
-     */
+    * A simplified matchMedia implementation for IE8 and IE9
+    * handles only min-width/max-width with px or em values
+    * @param media
+    * @returns {boolean}
+    */
     pf.mMQ = function( media ) {
         return media ? evalCSS(media) : true;
     };
 
     /**
-     * Returns the calculated length in css pixel from the given sourceSizeValue
-     * http://dev.w3.org/csswg/css-values-3/#length-value
-     * intended Spec mismatches:
-     * * Does not check for invalid use of CSS functions
-     * * Does handle a computed length of 0 the same as a negative and therefore invalid value
-     * @param sourceSizeValue
-     * @returns {Number}
-     */
+    * Returns the calculated length in css pixel from the given sourceSizeValue
+    * http://dev.w3.org/csswg/css-values-3/#length-value
+    * intended Spec mismatches:
+    * * Does not check for invalid use of CSS functions
+    * * Does handle a computed length of 0 the same as a negative and therefore invalid value
+    * @param sourceSizeValue
+    * @returns {Number}
+    */
     pf.calcLength = function( sourceSizeValue ) {
 
         var value = evalCSS(sourceSizeValue, true) || false;
@@ -1095,18 +1095,18 @@
     };
 
     /**
-     * Takes a type string and checks if its supported
-     */
+    * Takes a type string and checks if its supported
+    */
 
     pf.supportsType = function( type ) {
         return ( type ) ? types[ type ] : true;
     };
 
     /**
-     * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
-     * @param sourceSizeStr
-     * @returns {*}
-     */
+    * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
+    * @param sourceSizeStr
+    * @returns {*}
+    */
     pf.parseSize = memoize(function( sourceSizeStr ) {
         var match = ( sourceSizeStr || "" ).match(regSize);
         return {
@@ -1123,10 +1123,10 @@
     };
 
     /**
-     * returns 1em in css px for html/body default size
-     * function taken from respondjs
-     * @returns {*|number}
-     */
+    * returns 1em in css px for html/body default size
+    * function taken from respondjs
+    * @returns {*|number}
+    */
     pf.getEmValue = function() {
         var body;
         if ( !eminpx && (body = document.body) ) {
@@ -1157,8 +1157,8 @@
     };
 
     /**
-     * Takes a string of sizes and returns the width in pixels as a number
-     */
+    * Takes a string of sizes and returns the width in pixels as a number
+    */
     pf.calcListLength = function( sourceSizeListStr ) {
         // Split up source size list, ie ( max-width: 30em ) 100%, ( max-width: 50em ) 50%, 33%
         //
@@ -1173,15 +1173,15 @@
     };
 
     /**
-     * Takes a candidate object with a srcset property in the form of url/
-     * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
-     *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
-     *     "images/pic-small.png"
-     * Get an array of image candidates in the form of
-     *      {url: "/foo/bar.png", resolution: 1}
-     * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
-     * If sizes is specified, res is calculated
-     */
+    * Takes a candidate object with a srcset property in the form of url/
+    * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
+    *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
+    *     "images/pic-small.png"
+    * Get an array of image candidates in the form of
+    *      {url: "/foo/bar.png", resolution: 1}
+    * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
+    * If sizes is specified, res is calculated
+    */
     pf.setRes = function( set ) {
         var candidates;
         if ( set ) {
