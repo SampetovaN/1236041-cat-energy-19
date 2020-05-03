@@ -1,10 +1,10 @@
-var menuListToggle = document.querySelector('.main-nav__toggle');
-var menu = document.querySelector('.main-nav');
-var menuList = document.querySelector('.main-nav__nav-list');
+//var menuListToggle = document.querySelector('.main-nav__toggle');
+//var menu = document.querySelector('.main-nav');
+//var menuList = document.querySelector('.main-nav__nav-list');
 var mapContainer = document.querySelector('.contacts__map-wrapper');
 var widthWindow = document.documentElement.clientWidth;
 
-if (menuListToggle) {
+/*if (menuListToggle) {
     if (widthWindow && widthWindow >= 768) {
         menuList.classList.remove('visually-hidden');
         menuListToggle.classList.remove('main-nav__toggle--closed');
@@ -34,7 +34,7 @@ if (menuListToggle) {
             }
         });
     }
-}
+}*/
 
 function initMap() {
     var coordinates = {lat: 59.939079, lng: 30.323042}

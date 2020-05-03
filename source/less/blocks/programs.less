@@ -40,14 +40,8 @@
   display: flex;
   flex-direction: row;
 
-  @media (min-width: @width-tablet) {
-    display: block;
+  @media (min-width: @width-tablet) and (max-width: @width-desktop - 1) {
     position: relative;
-  }
-
-  @media (min-width: @width-desktop) {
-    display: flex;
-    position: static;
   }
 }
 
