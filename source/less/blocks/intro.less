@@ -1,16 +1,16 @@
 .intro {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
   position: relative;
   box-sizing: border-box;
   min-height: 481px;
 
   &::after {
     content: "";
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
     background-color: silver;
     position: absolute;
-    width: 280px;
-    height: 50%;
+    width: 100%;
+    height: 305px;
     top: 0;
     left: 0;
     z-index: -1;
@@ -39,7 +39,8 @@
       width: 50vw;
       min-height: 696px;
       top: 0;
-      left: 50%;
+      right: 0;
+      left: auto;
       margin-top: -169px;
     }
   }
@@ -47,8 +48,10 @@
 
 @media (max-width: @width-tablet - 1px) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet - 1px) {
   .intro {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: 100%;
+    &::after {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 100%;
+    }
   }
 }
 
