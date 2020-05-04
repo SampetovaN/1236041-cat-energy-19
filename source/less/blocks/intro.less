@@ -1,22 +1,23 @@
 .intro {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
   position: relative;
   box-sizing: border-box;
   min-height: 481px;
 
   &::after {
     content: "";
-    background-color: silver;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #68b738;
     position: absolute;
-    width: 280px;
-    height: 50%;
+    width: 100%;
+    height: 305px;
     top: 0;
     left: 0;
     z-index: -1;
   }
 
-  @media (min-width: @width-tablet) {
+  @media (min-width: @width-tablet) and (max-width: @width-desktop - 1) {
     &::after {
       .reset-pseudo-el();
     }
@@ -29,27 +30,22 @@
     min-height: 608px;
 
     &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-color: silver;
       background-size: cover;
       width: 50vw;
-      min-height: 696px;
+      height: 696px;
       right: 0;
-      top: 0;
-      left: initial;
+      left: auto;
       margin-top: -169px;
     }
   }
 }
 
-@media (max-width: @width-tablet - 1px) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet - 1px) {
+@media (max-width: @width-tablet - 1) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet - 1) {
   .intro {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: 100%;
+    &::after {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -64,36 +60,34 @@
 .intro__wrapper {
   margin: 0 auto;
   width: 320px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @width-tablet) {
     width: @width-tablet;
   }
 
   @media (min-width: @width-desktop) {
+    flex-direction: row;
     width: @width-desktop;
   }
 }
 
 .intro__image-wrapper {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  margin-left: -140px;
-  margin-top: -72px;
+  margin-top: -312px;
+  margin-left: 19px;
 
   @media (min-width: @width-tablet) {
+    position: static;
     z-index: -1;
-    left: 169px;
-    top: 309px;
+    margin-left: 31px;
+    margin-top: -78px;
   }
 
   @media (min-width: @width-desktop) {
     z-index: 1;
-    left: 49%;
-    top: -25px;
-    right: 0;
-    margin-top: 0;
+    margin-left: -136px;
+    margin-top: -29px;
   }
 }
 
@@ -119,9 +113,8 @@
   }
 
   @media (min-width: @width-desktop) {
-
     width: 626px;
-    padding-left: 190px;
+    padding-left: 120px;
     padding-top: 56px;
   }
 }
@@ -134,9 +127,9 @@
 
   @media (min-width: @width-tablet) {
     .text-color-sets(60px; 60px; @intro-text-color-tablet);
-    text-align: start;
+    text-align: left;
     padding: 0;
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 }
 
@@ -148,8 +141,8 @@
 
   @media (min-width: @width-tablet) {
     .text-color-sets(20px; 20px; @intro-text-color-tablet);
-    text-align: start;
-    margin-bottom: 50px;
+    text-align: left;
+    margin-bottom: 47px;
   }
 }
 
@@ -157,11 +150,13 @@
   display: block;
   margin: 0 auto;
   margin-top: 304px;
-  padding: 11px 73px;
+  width: 280px;
+  padding: 10px 0;
 
   @media (min-width: @width-tablet) {
     margin: 0;
     padding: 15px 28px;
+    width: 193px;
   }
 
   @media (min-width: @width-desktop) {

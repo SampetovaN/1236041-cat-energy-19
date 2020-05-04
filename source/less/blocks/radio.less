@@ -1,6 +1,6 @@
 .radio__label {
   .pick-label();
-  padding-left: 47px;
+  padding-left: 45px;
   position: relative;
   padding-bottom: 10px;
 
@@ -26,12 +26,18 @@
     }
   }
 
-  input[type="radio"]:focus,
   input[type="radio"]:hover {
     + .radio__indicator {
       border: solid 1px #bababa;
     }
   }
+
+  input[type="radio"]:focus {
+    + .radio__indicator {
+      border: 1px solid #669ec0;
+    }
+  }
+
 
   input[type="radio"]:active {
     + .radio__indicator {

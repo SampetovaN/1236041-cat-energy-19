@@ -25,28 +25,54 @@
   padding-left: 15px;
 
   &:active {
-    + .field__icon-wrapper {
+    + .field__icon {
       fill: #68b738;
     }
   }
 
-  &--error {
-    + .field__icon-wrapper {
-      fill: #ff8282;
+  &:focus:required:invalid {
+    + .field__icon {
+      fill: @input-color-error;
     }
   }
 
   @media (min-width: @width-tablet) {
-    padding: 16px 0;
-    padding-left: 19px;
+    padding: 16px 20px;
+    margin-left: 16px;
   }
 }
 
-.field__icon-wrapper {
-  position: absolute;
-  right: 33px;
+input[name="phone"],
+input[name="email"] {
+  margin-left: 10px;
+
+  @media (min-width: @width-tablet) {
+    margin-left: 16px;
+  }
 
   @media (min-width: @width-desktop) {
+    padding: 18px 18px 17px;
+  }
+}
+
+input[name="email"] {
+  @media (min-width: @width-desktop) {
+    margin-left: 21px;
+  }
+}
+
+.field__icon {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+
+  @media (min-width: @width-tablet) {
+    top: 16px;
     right: 16px;
+  }
+
+  @media (min-width: @width-desktop) {
+    right: 19px;
+    top: 18px;
   }
 }
