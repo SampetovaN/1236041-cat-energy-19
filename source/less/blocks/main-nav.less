@@ -18,6 +18,10 @@
       }
     }
   }
+
+  @media (min-width: @width-tablet) {
+    justify-content: space-between;
+  }
 }
 
 .main-nav__logo {
@@ -83,7 +87,7 @@
       &:active {
         &::before,
         &::after {
-          background-color: fade(#111111, 30%);
+          background-color: rgba(red(#111111), green(#111111), blue(#111111), 0.3);
         }
       }
     }
@@ -106,7 +110,6 @@
 .main-nav__nav-list {
   @media (min-width: @width-tablet) {
     flex-grow: 0;
-    margin-left: auto;
     margin-top: 12px;
     width: auto;
   }

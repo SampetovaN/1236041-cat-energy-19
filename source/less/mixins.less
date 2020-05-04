@@ -47,7 +47,7 @@
   cursor: pointer;
 
   &:active {
-    color: fade(@label-color, 30%);
+    color: rgba(red(@label-color), green(@label-color), blue(@label-color), 0.3);
   }
 
   @media (min-width: @width-tablet) {
@@ -66,7 +66,7 @@
 
   &:active {
     background-color: @color-active;
-    color: fade(@color-text, 30%);
+    color: rgba(red(@color-text), green(@color-text), blue(@color-text), 0.3);
   }
 }
 
@@ -76,11 +76,11 @@
 
     &:hover,
     &:focus {
-      color: fade(@product-title-color, 60%);
+      color: rgba(red(@product-title-color), green(@product-title-color), blue(@product-title-color), 0.6);
     }
 
     &:active {
-      color: fade(@product-title-color, 30%);
+      color: rgba(red(@product-title-color), green(@product-title-color), blue(@product-title-color), 0.3);
     }
   }
   text-transform: uppercase;
@@ -124,11 +124,11 @@
 
   &:hover,
   &:focus {
-    color: fade(@color, 60%);
+    color: rgba(red(@color), green(@color), blue(@color), 0.6);
   }
 
   &:active {
-    color: fade(@color, 30%);
+    color: rgba(red(@color), green(@color), blue(@color), 0.3);
   }
 }
 

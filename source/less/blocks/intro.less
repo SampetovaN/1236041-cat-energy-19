@@ -8,7 +8,7 @@
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-color: silver;
+    background-color: #68b738;
     position: absolute;
     width: 100%;
     height: 305px;
@@ -17,7 +17,7 @@
     z-index: -1;
   }
 
-  @media (min-width: @width-tablet) {
+  @media (min-width: @width-tablet) and (max-width: @width-desktop - 1) {
     &::after {
       .reset-pseudo-el();
     }
@@ -30,16 +30,10 @@
     min-height: 608px;
 
     &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-color: silver;
       background-size: cover;
       width: 50vw;
-      min-height: 696px;
-      top: 0;
+      height: 696px;
       right: 0;
       left: auto;
       margin-top: -169px;
@@ -47,7 +41,7 @@
   }
 }
 
-@media (max-width: @width-tablet - 1px) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet - 1px) {
+@media (max-width: @width-tablet - 1) and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) and (max-width: @width-tablet - 1) {
   .intro {
     &::after {
       background-image: url("../img/index-background-mobile@2x.jpg");
@@ -66,36 +60,34 @@
 .intro__wrapper {
   margin: 0 auto;
   width: 320px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @width-tablet) {
     width: @width-tablet;
   }
 
   @media (min-width: @width-desktop) {
+    flex-direction: row;
     width: @width-desktop;
   }
 }
 
 .intro__image-wrapper {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  margin-left: -140px;
-  margin-top: -72px;
+  margin-top: -312px;
+  margin-left: 19px;
 
   @media (min-width: @width-tablet) {
+    position: static;
     z-index: -1;
-    left: 22%;
-    top: 309px;
+    margin-left: 31px;
+    margin-top: -78px;
   }
 
   @media (min-width: @width-desktop) {
     z-index: 1;
-    left: 48.5%;
-    top: -25px;
-    right: 0;
-    margin-top: 0;
+    margin-left: -136px;
+    margin-top: -29px;
   }
 }
 

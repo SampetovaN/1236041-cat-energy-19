@@ -5,25 +5,19 @@
     background-color: @background-color;
     position: relative;
     border-top: 1px solid #ededed;
-
-    &::after {
-      content: "";
-      background: linear-gradient(90deg, #f2f2f2 50%, #eaeaea 50%);
-      position: absolute;
-      height: 462px;
-      width: 100%;
-      top: 57.5%;
-      left: 0;
-    }
   }
 
   @media (min-width: @width-desktop) {
     border-top: none;
 
     &::after {
+      content: "";
+      position: absolute;
       background: linear-gradient(90deg, #f2f2f2 75%, #eaeaea 75%);
       top: 158px;
       left: 0;
+      height: 462px;
+      width: 100%;
     }
   }
 }
@@ -53,7 +47,7 @@
   @media (min-width: @width-tablet) {
     .text-sets(60px; 60px);
     margin-bottom: 65px;
-    padding: 41px 30px 0;
+    padding: 40px 30px 0;
   }
 
   @media (min-width: @width-desktop) {
@@ -71,7 +65,7 @@
   @media (min-width: @width-desktop) {
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 65px;
+    padding-bottom: 68px;
   }
 }
 
@@ -80,7 +74,7 @@
   padding: 0 20px;
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 89px;
+    margin-bottom: 87px;
     padding: 0 30px;
   }
 
@@ -100,7 +94,7 @@
 
   @media (min-width: @width-tablet) {
     .sets-paragraph(16px; 24px);
-    margin-bottom: 51px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @width-desktop) {
@@ -222,7 +216,7 @@
     .text-sets(20px; 20px);
     margin: 0;
     margin-left: auto;
-    margin-top: 10px;
+    margin-top: 3px;
     width: 175px;
     text-align: right;
   }
@@ -266,12 +260,30 @@
     flex-direction: row;
     justify-content: center;
     margin: 0 auto 18px;
+
+    &::after {
+      content: "";
+      background: linear-gradient(90deg,#f2f2f2 50%,#eaeaea 50%);
+      position: absolute;
+      height: 462px;
+      width: 100%;
+      top: 57.3%;
+      left: 0;
+    }
   }
 
   @media (min-width: @width-desktop) {
     margin-top: -242px;
     height: 517px;
     margin-bottom: 25px;
+    position: relative;
+
+    &::after {
+      top: 176px;
+      width: 690px;
+      height: 457px;
+      background: linear-gradient(90deg,#f2f2f2 53%,#eaeaea 53%);
+    }
   }
 }
 
@@ -289,10 +301,10 @@
     overflow-x: hidden;
     max-width: 690px;
     max-height: 517px;
+    z-index: 5;
 
     &--before {
       max-width: 341px;
-      z-index: 5;
     }
 
     &--after {
@@ -304,6 +316,7 @@
   @media (min-width: @width-desktop) {
     right: 0;
     margin-top: -17px;
+
     &--before {
       max-width: 362px;
     }
@@ -340,7 +353,7 @@
   align-items: center;
 
   @media (min-width: @width-tablet) {
-    padding-bottom: 67px;
+    padding-bottom: 69px;
   }
 
   @media (min-width: @width-desktop) {
@@ -357,9 +370,7 @@
   border-radius: 12px;
   border: 1px solid #cdcdcd;
   position: relative;
-  margin: 0 18px;
-  margin-left: 17px;
-
+  margin: 0 17px 2px 18px;
 
   &::after {
     content: "";
@@ -377,7 +388,7 @@
     height: 6px;
     background-color: #dcdcdc;
     border-radius: 2.5px;
-    margin: 0 22px 3px 18px;
+    margin: 0 22px 7px;
 
     &::after {
       .reset-pseudo-el();
@@ -397,23 +408,27 @@
   cursor: pointer;
   outline: none;
   display: block;
-  padding: 0;
+  padding: 0 0 2px;
+  border-bottom: 1px dotted transparent;
 
   &:focus,
   &:hover {
-    padding-bottom: 6px;
-    border-bottom: 1px dotted fade(#111111, 23%);
+    border-bottom: 1px solid rgba(red(#111111), green(#111111), blue(#111111), 0.4);
   }
 
   &:active {
-    padding-bottom: 6px;
-    border-bottom: 1px solid fade(#111111, 40%);
+    border-color: transparent;
   }
 
   @media (min-width: @width-tablet) {
     .text-sets(20px; 20px;);
-    padding-bottom: 6px;
-    border-bottom: 1px dotted fade(#111111, 23%);
+    border-color: rgba(red(#111111), green(#111111), blue(#111111), 0.23);
+    z-index: 5;
+    padding: 0 0 7px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0 0 4px;
   }
 }
 
@@ -437,7 +452,7 @@
 
     &:active {
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-      border-color: #68b738;
+      border: solid 2px #68b738;
     }
 
     &::after {
