@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
 
+  // реализация главного меню без js
   &--nojs {
     @media (max-width: @width-tablet - 1) {
       .main-nav__toggle {
@@ -61,6 +62,7 @@
   width: 24px;
   height: 18px;
 
+  // реализация с js - кнопка, если меню закрыто
   &--closed {
     background-image: url("../img/icon-mobile-menu.svg");
 
@@ -68,7 +70,7 @@
       opacity: 0.3;
     }
   }
-
+  // реализация с js - кнопка, если меню открыто
   &--opened {
     background-image: none;
     margin-top: 12px;
