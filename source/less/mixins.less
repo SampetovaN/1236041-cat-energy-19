@@ -132,6 +132,18 @@
   }
 }
 
+.set-border-nav (@border-color) {
+  border-bottom: 2px solid @border-color;
+  &:hover,
+  &:focus {
+    border-color: rgba(red(@border-color), green(@border-color), blue(@border-color), 0.6);
+  }
+
+  &:active {
+    border-color: rgba(red(@border-color), green(@border-color), blue(@border-color), 0.3);
+  }
+}
+
 .wrapper-reset () {
   padding: 0;
   width: 320px;

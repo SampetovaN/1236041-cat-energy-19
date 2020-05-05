@@ -10,7 +10,6 @@
   }
 
   @media (min-width: @width-desktop) {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 78px;
@@ -23,6 +22,8 @@
   background-color: @program-background-color;
   margin-bottom: 20px;
   .last-child-margin();
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @width-tablet) {
     padding: 76px 52px 60px;

@@ -16,6 +16,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var uglify = require("gulp-uglify");
 var del = require("del");
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task("clean", function () {
     return del("build");
@@ -42,6 +43,7 @@ gulp.task("script", function () {
 gulp.task("html", function () {
     return gulp.src("source/*.html")
         .pipe(posthtml([include()]))
+        .pipe(htmlmin({ collapseWhitespace: true, ignoreCustomFragments: [/\s<br>\s/] }))
         .pipe(gulp.dest("build"));
 });
 
