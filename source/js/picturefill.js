@@ -4,7 +4,7 @@
  */
 /*! Gecko-Picture - v1.0
  * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
- * Firefox"s early picture implementation (prior to FF41) is static and does
+ * Firefox's early picture implementation (prior to FF41) is static and does
  * not react to viewport changes. This tiny module fixes this.
  */
 (function(window) {
