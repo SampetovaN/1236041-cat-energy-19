@@ -129,22 +129,24 @@
 }
 
 .results__item {
+  .text-color-sets(24px; 24px; @results-amount-color);
+  text-transform: uppercase;
+  margin: 0;
   box-sizing: border-box;
   width: 124px;
-  padding: 14px 0;
+  padding: 14px 0 17px;
   text-align: center;
-  border-top: 1px solid #cdcdcd;
-  border-right: 1px solid #cdcdcd;
-  border-left: 1px solid #cdcdcd;
+  border: 1px solid #cdcdcd;
   border-radius: 3px;
   position: relative;
   margin-bottom: 35px;
 
   @media (min-width: @width-tablet) {
+    .text-sets(30px; 37px);
     margin: 0;
     width: 161px;
     padding: 17px 0;
-    margin-right: 45px;
+    margin-right: 44px;
 
     &:last-of-type {
       margin-right: 0;
@@ -159,57 +161,34 @@
   }
 }
 
-.results__amount {
-  .text-color-sets(24px; 24px; @results-amount-color);
-  margin: 0;
-  text-transform: uppercase;
-
-  @media (min-width: @width-tablet) {
-    .text-sets(30px; 37px);
-  }
-}
-
-
 .results__text {
   .sets-paragraph(12px; 12px);
   margin: 0;
   position: absolute;
-  display: flex;
-  align-items: baseline;
   bottom: -15px;
-  width: 100%;
+  background-color: @results-background-color;
+  width: 65%;
+  margin-left: -60px;
 
-  &::after,
-  &::before {
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: #cdcdcd;
-  }
-
-  &::after {
-    margin-left: 10px;
-  }
-
-  &::before {
-    margin-right: 10px;
+  &--time {
+    margin-left: -80px;
   }
 
   @media (min-width: @width-tablet) {
     .sets-paragraph(14px; 14px);
-    bottom: -6px;
-    align-items: center;
+    background-color: @background-color;
+    bottom: -7.9px;
+    width: 77%;
+    margin-left: -86px;
 
-    &::after,
-    &::before {
-      width: 1px;
-      flex-grow: 1;
-      flex-shrink: 0;
+    &--time {
+      width: 89%;
+      margin-left: -123px;
     }
   }
 
   @media (min-width: @width-desktop) {
-    bottom: -7.9px;
+    background-color: @results-background-color;
   }
 }
 
@@ -248,6 +227,9 @@
 }
 
 .results__appearance {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @width-tablet) {
     z-index: 5;
   }
@@ -335,7 +317,7 @@
 }
 
 .results__slider {
-  padding-bottom: 33px;
+  padding-bottom: 31px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,7 +340,7 @@
   border-radius: 12px;
   border: 1px solid #cdcdcd;
   position: relative;
-  margin: 0 17px 2px 18px;
+  margin: 0 17px 4px 18px;
 
   &::after {
     content: "";
