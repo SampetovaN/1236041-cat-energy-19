@@ -62,7 +62,7 @@
   width: 24px;
   height: 18px;
 
-  // реализация с js - кнопка, если меню закрыто
+  // реализация с js - кнопка гамбургера, меню закрыто
   &--closed {
     background-image: url("../img/icon-mobile-menu.svg");
 
@@ -70,7 +70,7 @@
       opacity: 0.3;
     }
   }
-  // реализация с js - кнопка, если меню открыто
+  // реализация с js - кнопка крестика, меню открыто
   &--opened {
     background-image: none;
     margin-top: 12px;
@@ -110,6 +110,13 @@
 
 
 .main-nav__nav-list {
+  @media (max-width: @width-tablet - 1) {
+    // реализация с js - меню закрыто
+    &--closed {
+      display: none;
+    }
+  }
+
   @media (min-width: @width-tablet) {
     margin-top: 12px;
   }
