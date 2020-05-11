@@ -54,48 +54,47 @@
   @media (min-width: @width-desktop) {
     width: 893px;
     margin-bottom: 0;
+    justify-content: space-between;
   }
 }
 
 .snacks__promo-wrapper {
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-color: silver;
+  background-color: #68b738;
   background-repeat: no-repeat;
-  width: 280px;
-  height: 289px;
+  background-size: cover;
+  min-width: 280px;
+  min-height: 289px;
   margin: 0 auto;
 
   @media (min-width: @width-tablet) {
     background-image: url("../img/gift-photo-tablet@1x.jpg");
-    width: 708px;
-    height: 200px;
+    min-width: 708px;
+    min-height: 200px;
   }
 
   @media (min-width: @width-desktop) {
     background-image: url("../img/gift-photo-desktop@1x.jpg");
-    width: 245px;
-    height: 289px;
+    min-width: 245px;
+    min-height: 289px;
   }
 }
 
 @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
   .snacks__promo-wrapper {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
-    background-size: contain;
   }
 }
 
 @media (min-width: @width-tablet) and (min-resolution: @retina-dppx), (min-width: @width-tablet) and (min-resolution: @retina-dpi) {
   .snacks__promo-wrapper {
     background-image: url("../img/gift-photo-tablet@2x.jpg");
-    background-size: contain;
   }
 }
 
 @media (min-width: @width-desktop) and (min-resolution: @retina-dppx), (min-width: @width-desktop) and (min-resolution: @retina-dpi) {
   .snacks__promo-wrapper {
     background-image: url("../img/gift-photo-desktop@2x.jpg");
-    background-size: contain;
   }
 }
 

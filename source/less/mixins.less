@@ -27,17 +27,23 @@
   padding: 0;
 }
 
-.placeholder-style() {
-  &::placeholder {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 18px;
-    color: @placeholder-text-color;
-    text-transform: uppercase;
+.input-common(@color: black) {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  color: @color;
+  text-transform: uppercase;
 
-    @media (min-width: @width-tablet) {
-      .text-sets(20px; 20px;);
-    }
+  @media (min-width: @width-tablet) {
+    .text-sets(20px; 20px;);
+  }
+}
+
+.placeholder-input-style() {
+  .input-common();
+
+  &::placeholder {
+    .input-common(@placeholder-text-color);
   }
 }
 
