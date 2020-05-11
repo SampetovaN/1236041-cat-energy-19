@@ -30,7 +30,7 @@
     &--email,
     &--phone {
       input {
-        padding: 18px 18px 17px;
+        padding: 9px 17px;
       }
     }
 
@@ -57,13 +57,18 @@
 }
 
 .field__input {
-  .placeholder-style();
+  .placeholder-input-style();
   .input-border();
   box-sizing: border-box;
   width: 100%;
-  margin-left: 14px;
-  padding: 13px 0;
-  padding-left: 15px;
+  margin-left: 16px;
+  padding: 13px 0 11px;
+  padding-left: 16px;
+
+  &:active,
+  &:focus {
+    margin-top: -2px;
+  }
 
   &:active {
     + .field__icon {
@@ -72,13 +77,13 @@
   }
 
   &:focus:required:invalid {
-    + .field__icon {
-      fill: @input-color-error;
+      + .field__icon {
+        fill: @input-color-error;
+      }
     }
-  }
 
   @media (min-width: @width-tablet) {
-    padding: 16px 20px;
+    padding: 9px 19px;
     margin-left: 16px;
   }
 }

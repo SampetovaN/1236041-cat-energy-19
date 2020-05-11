@@ -217,7 +217,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    margin-bottom: 67px;
+    margin-bottom: 59px;
   }
 }
 
@@ -234,6 +234,7 @@
     flex-direction: row;
     padding: 0;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -247,8 +248,12 @@
 
   @media (min-width: @width-desktop) {
     width: 570px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     padding: 0;
+
+     &:last-child {
+       margin-bottom: 10px;
+     }
   }
 }
 

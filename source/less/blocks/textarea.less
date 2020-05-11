@@ -1,5 +1,5 @@
 .textarea {
-  .placeholder-style();
+  .placeholder-input-style();
   .input-border();
   box-sizing: border-box;
   width: 100%;
@@ -7,12 +7,27 @@
   padding: 13px 13px;
   resize: none;
 
+  &:active,
+  &:focus {
+    padding: 12px 12px;
+  }
+
   @media (min-width: @width-tablet) {
     height: 174px;
     padding: 16px 19px;
+
+    &:active,
+    &:focus {
+      padding: 15px 19px;
+    }
   }
 
   @media (min-width: @width-desktop) {
     padding: 14px 19px;
+
+    &:active,
+    &:focus {
+      padding: 13px 19px;
+    }
   }
 }
