@@ -6,45 +6,30 @@
 
   &::after {
     content: "";
-    width: 100vw;
+    width: 200vw;
     position: absolute;
     left: 0;
     right: 0;
-    top: 13px;
+    top: 14px;
     height: 3px;
     background-color: #68b738;
     z-index: -1;
   }
 
   @media (min-width: @width-tablet) {
-    padding: 0 37px;
+    padding-left: 37px;
     margin-right: -28px;
     margin-left: -36px;
 
-    &--catalog {
-      margin: 0;
-    }
-
     &::after {
       top: 22px;
-      transform: translate(-4.5%);
+      transform: translate(-14.5%);
     }
   }
 
   @media (min-width: @width-desktop) {
-    padding: 0 42px;
+    padding-left: 42px;
     margin-right: -44px;
     margin-left: -44px;
-
-    &--catalog {
-      padding: 0 37px;
-      margin-right: -44px;
-      margin-left: -44px;
-    }
-
-    &::after {
-      top: 22px;
-      transform: translate(1%);
-    }
   }
 }

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи: каталог продукции.</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
         document.createElement( "picture" );
@@ -24,7 +26,9 @@
               <img class="main-nav__image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
             </picture>
           </a>
-          <button class="main-nav__toggle main-nav__toggle--closed" type="button" aria-label="Кнопка открытия меню"></button>
+          <!-- main-nav__toggle--closed - меню закрыто/иконка гамбургера  main-nav__toggle--opened - меню открыто/иконка крестика-->
+          <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия меню"></button>
+          <!--  main-nav__nav-list--closed - меню закрыто  main-nav__nav-list - меню открыто (состояние по умолчанию)-->
           <ul class="main-nav__nav-list site-list">
             <li class="site-list__item"><a href="index.html">Главная</a></li>
             <li class="site-list__item"><a href="">Каталог продукции</a></li>
@@ -258,7 +262,7 @@
       </section>
       <section class="snacks">
         <div class="wrapper">
-          <h2 class="snacks__title title title--catalog">Дополнительные товары</h2>
+          <h2 class="snacks__title title">Дополнительные товары</h2>
           <div class="snacks__content">
             <ul class="snacks__list">
               <li class="snacks__item snack">
@@ -273,7 +277,7 @@
                 <h3 class="snack__title"><a href="product.html">Питьевая вода</a></h3>
                 <div class="snack__content">
                   <p class="snack__amount">5 литров</p>
-                  <p class="snack__price">50 Р.</p>
+                  <p class="snack__price snack__price--water">50 Р.</p>
                 </div>
                 <a class="button button--green snack__button" href="order.html">Заказать</a>
               </li>
@@ -311,7 +315,7 @@
           </p>
         </div>
         <div class="contacts__map-wrapper" aria-label="улица Большая Конюшенная, дом 19/8, город Санкт-Петербург">
-          <div class="contacts__pin-wrapper" aria-label="Указание адреса на карте"></div>
+          <div class="contacts__pin-wrapper"></div>
         </div>
       </section>
     </main>

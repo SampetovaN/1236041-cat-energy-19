@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи: функциональное питание для котов.</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
         document.createElement( "picture" );
@@ -24,7 +26,9 @@
             <img class="main-nav__image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
           </picture>
         </a>
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button" aria-label="Кнопка открытия меню"></button>
+          <!-- main-nav__toggle--closed - меню закрыто/иконка гамбургера  main-nav__toggle--opened - меню открыто/иконка крестика-->
+        <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия меню"></button>
+          <!--  main-nav__nav-list--closed - меню закрыто  main-nav__nav-list - меню открыто (состояние по умолчанию)-->
         <ul class="main-nav__nav-list site-list">
           <li class="site-list__item site-list__item--index"><a href="">Главная</a></li>
           <li class="site-list__item site-list__item--index"><a href="catalog.html">Каталог продукции</a></li>
@@ -59,19 +63,21 @@
         <h2 class="visually-hidden">Программы питания от корма Кэт энерджи</h2>
         <ul class="programs__list">
           <li class="programs__item">
-            <div class="programs__title">
-              <h3 class="programs__text">Похудение</h3>
+            <div class="programs__content">
+              <h3 class="programs__title">Похудение</h3>
               <div class="programs__logo programs__logo--slim"></div>
-            </div>
+
             <p class="programs__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            </div>
             <a class="programs__link" href="catalog.html#slim">Каталог Slim</a>
           </li>
           <li class="programs__item">
-            <div class="programs__title">
-              <h3 class="programs__text">Набор массы</h3>
+            <div class="programs__content">
+              <h3 class="programs__title">Набор массы</h3>
               <div class="programs__logo programs__logo--pro"></div>
-            </div>
+
             <p class="programs__desc">Заработать авторитет среди дворовых котов <br> и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br> мышцы!</p>
+            </div>
             <a class="programs__link" href="catalog.html#pro">Каталог Pro</a>
           </li>
         </ul>
@@ -102,16 +108,17 @@
           <div class="results__content">
             <div class="results__info">
               <p class="results__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-                <div class="results__counts">
-                  <div class="results__item">
-                    <b class="results__amount">5 кг</b>
-                    <p class="results__text">снижение веса</p>
-                  </div>
-                  <div class="results__item">
-                    <b class="results__amount">60 дней</b>
-                    <p class="results__text">затрачено времени</p>
-                  </div>
-                  <p class="results__money">Затраты на питание: <span class="results__money-amount">15 000 руб.</span></p>
+                <div class="results__spend">
+                  <p class="results__count">
+                    5 кг
+                    <span class="results__count-text">снижение веса</span>
+                  </p>
+                  <p class="results__count">
+                    60 дней
+                    <span class="results__count-text results__count-text--time">затрачено времени</span>
+                  </p>
+                  <p class="results__money">Затраты на питание: <span class="results__money-amount">15 000 руб.</span>
+                  </p>
                 </div>
             </div>
             <div class="results__appearance">
@@ -150,14 +157,14 @@
     </section>
     <section class="contacts contacts--index">
       <h1 class="visually-hidden">Контакты Кэт Энерджи</h1>
-        <div class="contacts__text">
-          <p class="contacts__slogan">Приглашаем <br> к сотрудничеству дилеров!</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
-            <span class="contacts__address-city"> Санкт-Петербург</span>
-          </p>
+      <div class="contacts__text">
+        <p class="contacts__slogan">Приглашаем <br> к сотрудничеству дилеров!</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
+          <span class="contacts__address-city"> Санкт-Петербург</span>
+        </p>
       </div>
-      <div class="contacts__map-wrapper" aria-label="улица Большая Конюшенная, дом 19/8, город Санкт-Петербург">
-        <div class="contacts__pin-wrapper" aria-label="Указание адреса на карте"></div>
+        <div class="contacts__map-wrapper" aria-label="улица Большая Конюшенная, дом 19/8, город Санкт-Петербург">
+          <div class="contacts__pin-wrapper"></div>
       </div>
     </section>
   </main>

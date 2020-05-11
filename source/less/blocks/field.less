@@ -3,6 +3,47 @@
   flex-direction: row;
   align-items: center;
   position: relative;
+
+  &--email,
+  &--phone {
+    input {
+      margin-left: 10px;
+    }
+  }
+
+  @media (min-width: @width-tablet) {
+    &--email,
+    &--phone {
+      input {
+        margin-left: 18px;
+      }
+    }
+
+    &--email {
+      label {
+        margin-left: 3px;
+      }
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    &--email,
+    &--phone {
+      input {
+        padding: 18px 18px 17px;
+      }
+    }
+
+    &--email {
+      input {
+        margin-left: 21px;
+      }
+
+      label {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .field__label {
@@ -39,25 +80,6 @@
   @media (min-width: @width-tablet) {
     padding: 16px 20px;
     margin-left: 16px;
-  }
-}
-
-input[name="phone"],
-input[name="email"] {
-  margin-left: 10px;
-
-  @media (min-width: @width-tablet) {
-    margin-left: 16px;
-  }
-
-  @media (min-width: @width-desktop) {
-    padding: 18px 18px 17px;
-  }
-}
-
-input[name="email"] {
-  @media (min-width: @width-desktop) {
-    margin-left: 21px;
   }
 }
 
