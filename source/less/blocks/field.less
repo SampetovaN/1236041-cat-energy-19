@@ -31,6 +31,13 @@
     &--phone {
       input {
         padding: 9px 17px;
+
+        &:active,
+        &:focus {
+          padding-top: 7px;
+          padding-bottom: 7px;
+          padding-left: 16px;
+        }
       }
     }
 
@@ -67,7 +74,9 @@
 
   &:active,
   &:focus {
-    margin-top: -2px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 15px;
   }
 
   &:active {
@@ -85,6 +94,13 @@
   @media (min-width: @width-tablet) {
     padding: 9px 19px;
     margin-left: 16px;
+
+    &:active,
+    &:focus {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 18px;
+    }
   }
 }
 
@@ -96,6 +112,7 @@
   @media (min-width: @width-tablet) {
     top: 16px;
     right: 16px;
+
   }
 
   @media (min-width: @width-desktop) {
